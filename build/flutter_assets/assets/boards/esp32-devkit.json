@@ -1,0 +1,44 @@
+{
+  "id": "esp32-devkit",
+  "name": "ESP32 DevKit V1",
+  "category": "WiFi / BLE",
+  "microcontroller": "Tensilica Dual-Core 32-bit LX6",
+  "pins": [
+    {
+      "number": 1,
+      "name": "3V3",
+      "type": "Power",
+      "description": "3.3V Power Supply"
+    },
+    {
+      "number": 2,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 3,
+      "name": "D15",
+      "type": "GPIO",
+      "description": "GPIO 15 / ADC2_CH3 / Touch3"
+    },
+    {
+      "number": 4,
+      "name": "D2",
+      "type": "GPIO",
+      "description": "GPIO 2 / ADC2_CH2 / Touch2 / LED"
+    },
+    {
+      "number": 5,
+      "name": "D4",
+      "type": "GPIO",
+      "description": "GPIO 4 / ADC2_CH0 / Touch0"
+    },
+    {
+      "number": 23,
+      "name": "VIN",
+      "type": "Power",
+      "description": "External 5V Power Input"
+    }
+  ]
+}

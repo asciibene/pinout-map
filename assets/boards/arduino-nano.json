@@ -1,0 +1,44 @@
+{
+  "id": "arduino-nano",
+  "name": "Arduino Nano",
+  "category": "Classic AVR",
+  "microcontroller": "ATmega328P",
+  "pins": [
+    {
+      "number": 1,
+      "name": "TX1",
+      "type": "GPIO",
+      "description": "USART Transmit Data"
+    },
+    {
+      "number": 2,
+      "name": "RX1",
+      "type": "GPIO",
+      "description": "USART Receive Data"
+    },
+    {
+      "number": 3,
+      "name": "RST",
+      "type": "Power",
+      "description": "Reset (Active Low)"
+    },
+    {
+      "number": 4,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 12,
+      "name": "D10",
+      "type": "GPIO",
+      "description": "Digital Pin 10 (PWM / SS)"
+    },
+    {
+      "number": 15,
+      "name": "VIN",
+      "type": "Power",
+      "description": "Raw Voltage Input (7-12V)"
+    }
+  ]
+}

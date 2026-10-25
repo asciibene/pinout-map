@@ -1,0 +1,50 @@
+{
+  "id": "test",
+  "name": "test",
+  "category": "Microcontrollers",
+  "microcontroller": "RP2040 Dual ARM Cortex-M0+",
+  "pins": [
+    {
+      "number": 1,
+      "name": "GP0",
+      "type": "GPIO",
+      "description": "GPIO 0 / UART0 TX / I2C0 SDA"
+    },
+    {
+      "number": 2,
+      "name": "GP1",
+      "type": "GPIO",
+      "description": "GPIO 1 / UART0 RX / I2C0 SCL"
+    },
+    {
+      "number": 3,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 4,
+      "name": "GP2",
+      "type": "GPIO",
+      "description": "GPIO 2 / SPI0 SCK / I2C1 SDA"
+    },
+    {
+      "number": 36,
+      "name": "3V3_OUT",
+      "type": "Power",
+      "description": "Generated 3.3V supply output"
+    },
+    {
+      "number": 38,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 39,
+      "name": "VSYS",
+      "type": "Power",
+      "description": "System input voltage (1.8V - 5.5V)"
+    }
+  ]
+}
