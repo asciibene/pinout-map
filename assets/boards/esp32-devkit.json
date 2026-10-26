@@ -3,6 +3,7 @@
   "name": "ESP32 DevKit V1",
   "category": "WiFi / BLE",
   "microcontroller": "Tensilica Dual-Core 32-bit LX6",
+  "image": "assets/images/boards/esp32-devkit.jpg",
   "pins": [
     {
       "number": 1,

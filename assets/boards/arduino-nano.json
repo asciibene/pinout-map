@@ -3,6 +3,7 @@
   "name": "Arduino Nano",
   "category": "Classic AVR",
   "microcontroller": "ATmega328P",
+  "image": "assets/images/boards/arduino-nano.jpg",
   "pins": [
     {
       "number": 1,
