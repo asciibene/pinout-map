@@ -2,8 +2,11 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await MobileAds.instance.initialize();
   runApp(const PinoutApp());
 }
 
@@ -26,27 +29,57 @@ class PinoutApp extends StatelessWidget {
   }
 }
 
-class AdBannerPlaceholder extends StatelessWidget {
-  const AdBannerPlaceholder({super.key});
+class AdBanner extends StatefulWidget {
+  const AdBanner({super.key});
+
+  @override
+  State<AdBanner> createState() => _AdBannerState();
+}
+
+class _AdBannerState extends State<AdBanner> {
+  BannerAd? _bannerAd;
+  bool _isLoaded = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _bannerAd = BannerAd(
+      adUnitId: 'ca-app-pub-3940256099942544/6300978111',
+      size: AdSize.banner,
+      request: const AdRequest(),
+      listener: BannerAdListener(
+        onAdLoaded: (ad) {
+          if (!mounted) return;
+          setState(() {
+            _isLoaded = true;
+          });
+        },
+        onAdFailedToLoad: (ad, error) {
+          ad.dispose();
+        },
+      ),
+    )..load();
+  }
+
+  @override
+  void dispose() {
+    _bannerAd?.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      top: false,
-      child: Container(
+    if (!_isLoaded || _bannerAd == null) {
+      return const SizedBox(
         height: 50,
         width: double.infinity,
-        color: const Color(0xFF181818),
-        alignment: Alignment.center,
-        child: Text(
-          'AdMob Banner Ad Placeholder',
-          style: TextStyle(
-            color: Colors.grey[600],
-            fontSize: 12,
-            fontStyle: FontStyle.italic,
-          ),
-        ),
-      ),
+      );
+    }
+
+    return SizedBox(
+      height: 50,
+      width: double.infinity,
+      child: AdWidget(ad: _bannerAd!),
     );
   }
 }
@@ -207,7 +240,6 @@ class _BoardListScreenState extends State<BoardListScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            // Search Bar
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: TextField(
@@ -225,7 +257,6 @@ class _BoardListScreenState extends State<BoardListScreen> {
                 ),
               ),
             ),
-            // Grid View
             Expanded(
               child: FutureBuilder<List<Board>>(
                 future: _boardsFuture,
@@ -272,7 +303,7 @@ class _BoardListScreenState extends State<BoardListScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: const AdBannerPlaceholder(),
+      bottomNavigationBar: const AdBanner(),
     );
   }
 }
@@ -311,16 +342,16 @@ class BoardCard extends StatelessWidget {
                 child: Text(
                   board.category,
                   style: const TextStyle(
-                      fontSize: 10,
-                      color: Colors.blueAccent,
-                      fontWeight: FontWeight.bold),
+                    fontSize: 10,
+                    color: Colors.blueAccent,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               const Spacer(),
               Text(
                 board.name,
-                style:
-                    const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 4),
               Text(
@@ -332,11 +363,12 @@ class BoardCard extends StatelessWidget {
               const Spacer(),
               Row(
                 children: [
-                  Icon(Icons.developer_board,
-                      size: 14, color: Colors.grey[500]),
+                  Icon(Icons.developer_board, size: 14, color: Colors.grey[500]),
                   const SizedBox(width: 4),
-                  Text('${board.pins.length} Pins',
-                      style: TextStyle(fontSize: 11, color: Colors.grey[500])),
+                  Text(
+                    '${board.pins.length} Pins',
+                    style: TextStyle(fontSize: 11, color: Colors.grey[500]),
+                  ),
                 ],
               ),
             ],
@@ -375,7 +407,6 @@ class BoardDetailScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            // Header Summary Card
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(20),
@@ -383,17 +414,22 @@ class BoardDetailScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(board.microcontroller,
-                      style: TextStyle(color: Colors.grey[400], fontSize: 13)),
+                  Text(
+                    board.microcontroller,
+                    style: TextStyle(color: Colors.grey[400], fontSize: 13),
+                  ),
                   const SizedBox(height: 4),
-                  Text('Total Pins: ${board.pins.length}',
-                      style: const TextStyle(
-                          fontWeight: FontWeight.w600, fontSize: 15)),
+                  Text(
+                    'Total Pins: ${board.pins.length}',
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 15,
+                    ),
+                  ),
                 ],
               ),
             ),
             const Divider(height: 1, color: Colors.white12),
-            // Pin List
             Expanded(
               child: ListView.separated(
                 itemCount: board.pins.length,
@@ -409,27 +445,34 @@ class BoardDetailScreen extends StatelessWidget {
                       child: Text(
                         '${pin.number}',
                         style: TextStyle(
-                            color: pinColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 12),
+                          color: pinColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12,
+                        ),
                       ),
                     ),
-                    title: Text(pin.name,
-                        style: const TextStyle(fontWeight: FontWeight.bold)),
-                    subtitle: Text(pin.description,
-                        style: TextStyle(color: Colors.grey[400], fontSize: 12)),
+                    title: Text(
+                      pin.name,
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: Text(
+                      pin.description,
+                      style: TextStyle(color: Colors.grey[400], fontSize: 12),
+                    ),
                     trailing: Container(
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                       decoration: BoxDecoration(
                         border: Border.all(color: pinColor),
                         borderRadius: BorderRadius.circular(4),
                       ),
-                      child: Text(pin.type,
-                          style: TextStyle(
-                              color: pinColor,
-                              fontSize: 10,
-                              fontWeight: FontWeight.bold)),
+                      child: Text(
+                        pin.type,
+                        style: TextStyle(
+                          color: pinColor,
+                          fontSize: 10,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                   );
                 },
@@ -438,8 +481,7 @@ class BoardDetailScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: const AdBannerPlaceholder(),
+      bottomNavigationBar: const AdBanner(),
     );
   }
 }
-
