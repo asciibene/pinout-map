@@ -249,8 +249,7 @@ class _BoardListScreenState extends State<BoardListScreen> {
           applicationName: 'Pinout Workbench',
           applicationVersion: '0.0.0',
           children: const [
-            Text('created by ASCII BENE','2026'
-            ),
+            Text('created by ASCII BENE'),
           ],
         );
         break;
