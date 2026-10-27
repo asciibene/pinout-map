@@ -425,6 +425,10 @@ class BoardDetailScreen extends StatelessWidget {
       case 'GND':
         return Colors.grey;
       case 'ADC':
+        return Colors.yellowAccent;
+      case 'UART':
+        return Colors.greenAccent;
+      case 'SPI' :
         return Colors.purpleAccent;
       case 'GPIO':
       default:
