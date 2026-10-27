@@ -113,6 +113,7 @@ class Board {
   final String name;
   final String category;
   final String microcontroller;
+  final String imageAsset;
   final List<Pin> pins;
 
   const Board({
@@ -120,6 +121,7 @@ class Board {
     required this.name,
     required this.category,
     required this.microcontroller,
+    required this.imageAsset,
     required this.pins,
   });
 
@@ -135,6 +137,7 @@ class Board {
       category: _requiredString(json, 'category', context: 'Board'),
       microcontroller:
           _requiredString(json, 'microcontroller', context: 'Board'),
+      imageAsset: _requiredString(json, 'image', context: 'Board'),
       pins: [
         for (var index = 0; index < pins.length; index++)
           Pin.fromJson(
@@ -289,7 +292,7 @@ class _BoardListScreenState extends State<BoardListScreen> {
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      childAspectRatio: 0.85,
+                      childAspectRatio: 0.75,
                       crossAxisSpacing: 12,
                       mainAxisSpacing: 12,
                     ),
@@ -329,29 +332,60 @@ class BoardCard extends StatelessWidget {
           );
         },
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                decoration: BoxDecoration(
-                  color: Colors.blueGrey.withValues(alpha: 0.2),
-                  borderRadius: BorderRadius.circular(6),
-                ),
-                child: Text(
-                  board.category,
-                  style: const TextStyle(
-                    fontSize: 10,
-                    color: Colors.blueAccent,
-                    fontWeight: FontWeight.bold,
-                  ),
+              SizedBox(
+                height: 76,
+                width: double.infinity,
+                child: Stack(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: ColoredBox(
+                        color: const Color(0xFF171717),
+                        child: SizedBox.expand(
+                          child: Image.asset(
+                            board.imageAsset,
+                            fit: BoxFit.contain,
+                            semanticLabel: '${board.name} board',
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      top: 6,
+                      left: 6,
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 8,
+                          vertical: 4,
+                        ),
+                        decoration: BoxDecoration(
+                          color: const Color(0xCC121212),
+                          borderRadius: BorderRadius.circular(6),
+                        ),
+                        child: Text(
+                          board.category,
+                          style: const TextStyle(
+                            fontSize: 10,
+                            color: Colors.blueAccent,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              const Spacer(),
+              const SizedBox(height: 8),
               Text(
                 board.name,
-                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style:
+                    const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 4),
               Text(
@@ -360,7 +394,7 @@ class BoardCard extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(fontSize: 12, color: Colors.grey[400]),
               ),
-              const Spacer(),
+              const SizedBox(height: 4),
               Row(
                 children: [
                   Icon(Icons.developer_board, size: 14, color: Colors.grey[500]),

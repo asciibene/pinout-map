@@ -3,6 +3,7 @@
   "name": "test",
   "category": "Microcontrollers",
   "microcontroller": "RP2040 Dual ARM Cortex-M0+",
+  "image": "assets/images/boards/raspberry-pi-pico.jpg",
   "pins": [
     {
       "number": 1,

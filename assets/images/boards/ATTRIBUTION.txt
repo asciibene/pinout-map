@@ -1,0 +1,22 @@
+Board card images
+
+arduino-nano.jpg
+  "Arduino Nano.jpg" by David Mellis
+  https://commons.wikimedia.org/wiki/File:Arduino_Nano.jpg
+  Licensed under CC BY 2.0:
+  https://creativecommons.org/licenses/by/2.0/
+  The bundled image is a 500 px Wikimedia Commons thumbnail.
+
+esp32-devkit.jpg
+  "Espressif ESP-WROOM-32 Wi-Fi & Bluetooth Module.jpg" by Brian Krent
+  https://commons.wikimedia.org/wiki/File:Espressif_ESP-WROOM-32_Wi-Fi_%26_Bluetooth_Module.jpg
+  Licensed under CC BY-SA 4.0:
+  https://creativecommons.org/licenses/by-sa/4.0/
+  The bundled image is a 500 px Wikimedia Commons thumbnail.
+
+raspberry-pi-pico.jpg
+  "Raspberry Pi Pico top and bottom.jpg" by Ogidya
+  https://commons.wikimedia.org/wiki/File:Raspberry_Pi_Pico_top_and_bottom.jpg
+  Licensed under CC BY-SA 4.0:
+  https://creativecommons.org/licenses/by-sa/4.0/
+  The bundled image is a 500 px Wikimedia Commons thumbnail.
