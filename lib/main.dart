@@ -217,8 +217,11 @@ class BoardListScreen extends StatefulWidget {
   State<BoardListScreen> createState() => _BoardListScreenState();
 }
 
+enum _BoardMenuAction { switchView, about, licenses }
+
 class _BoardListScreenState extends State<BoardListScreen> {
   String _searchQuery = '';
+  bool _isGridView = true;
   late final Future<List<Board>> _boardsFuture;
 
   @override
@@ -233,12 +236,67 @@ class _BoardListScreenState extends State<BoardListScreen> {
     });
   }
 
+  void _handleMenuAction(_BoardMenuAction action) {
+    switch (action) {
+      case _BoardMenuAction.switchView:
+        setState(() {
+          _isGridView = !_isGridView;
+        });
+        break;
+      case _BoardMenuAction.about:
+        showAboutDialog(
+          context: context,
+          applicationName: 'Pinout Workbench',
+          applicationVersion: '1.0.0',
+          children: const [
+            Text(
+              'Browse development board pinouts, search pin functions, and '
+              'identify power, ground, analog, serial, and digital pins.',
+            ),
+          ],
+        );
+        break;
+      case _BoardMenuAction.licenses:
+        showLicensePage(
+          context: context,
+          applicationName: 'Pinout Workbench',
+        );
+        break;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Pinout Workbench'),
         centerTitle: true,
+        actions: [
+          PopupMenuButton<_BoardMenuAction>(
+            tooltip: 'More options',
+            onSelected: _handleMenuAction,
+            itemBuilder: (context) => [
+              PopupMenuItem(
+                value: _BoardMenuAction.switchView,
+                child: Row(
+                  children: [
+                    Icon(_isGridView ? Icons.view_list : Icons.grid_view),
+                    const SizedBox(width: 12),
+                    Text(_isGridView ? 'List view' : 'Grid view'),
+                  ],
+                ),
+              ),
+              const PopupMenuItem(
+                value: _BoardMenuAction.about,
+                child: Text('About'),
+              ),
+              const PopupMenuItem(
+                value: _BoardMenuAction.licenses,
+                child: Text('Licences'),
+              ),
+            ],
+          ),
+        ],
       ),
       body: SafeArea(
         child: Column(
@@ -288,17 +346,29 @@ class _BoardListScreenState extends State<BoardListScreen> {
                     return const Center(child: Text('No microcontrollers found'));
                   }
 
-                  return GridView.builder(
+                  if (_isGridView) {
+                    return GridView.builder(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        childAspectRatio: 0.75,
+                        crossAxisSpacing: 12,
+                        mainAxisSpacing: 12,
+                      ),
+                      itemCount: boards.length,
+                      itemBuilder: (context, index) =>
+                          BoardCard(board: boards[index]),
+                    );
+                  }
+
+                  return ListView.separated(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      childAspectRatio: 0.75,
-                      crossAxisSpacing: 12,
-                      mainAxisSpacing: 12,
-                    ),
                     itemCount: boards.length,
+                    separatorBuilder: (context, index) =>
+                        const SizedBox(height: 8),
                     itemBuilder: (context, index) =>
-                        BoardCard(board: boards[index]),
+                        BoardListTile(board: boards[index]),
                   );
                 },
               ),
@@ -307,6 +377,54 @@ class _BoardListScreenState extends State<BoardListScreen> {
         ),
       ),
       bottomNavigationBar: const AdBanner(),
+    );
+  }
+}
+
+class BoardListTile extends StatelessWidget {
+  final Board board;
+
+  const BoardListTile({super.key, required this.board});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: const Color(0xFF1E1E1E),
+      child: ListTile(
+        contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+        leading: SizedBox(
+          width: 52,
+          height: 52,
+          child: board.imageAsset.isEmpty
+              ? const Icon(Icons.developer_board, color: Colors.blueGrey)
+              : Image.asset(
+                  board.imageAsset,
+                  fit: BoxFit.contain,
+                  semanticLabel: '${board.name} board',
+                ),
+        ),
+        title: Text(
+          board.name,
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+          style: const TextStyle(fontWeight: FontWeight.bold),
+        ),
+        subtitle: Text(
+          '${board.microcontroller}\n${board.category} - ${board.pins.length} pins',
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
+        ),
+        isThreeLine: true,
+        trailing: const Icon(Icons.chevron_right),
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => BoardDetailScreen(board: board),
+            ),
+          );
+        },
+      ),
     );
   }
 }
