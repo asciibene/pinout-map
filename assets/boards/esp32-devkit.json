@@ -1,45 +1,237 @@
 {
   "id": "esp32-devkit",
-  "name": "ESP32 DevKit V1",
-  "category": "WiFi / BLE",
-  "microcontroller": "Tensilica Dual-Core 32-bit LX6",
-  "image": "assets/images/boards/esp32-devkit.jpg",
+  "name": "ESP32 DevKitC V4 (38-pin)",
+  "category": "Wi-Fi / Bluetooth",
+  "microcontroller": "ESP32-WROOM-32; dual-core Xtensa LX6",
+  "image": "",
   "pins": [
     {
       "number": 1,
       "name": "3V3",
-      "type": "Power",
-      "description": "3.3V Power Supply"
+      "type": "POWER",
+      "description": "3.3 V output"
     },
     {
       "number": 2,
+      "name": "EN",
+      "type": "POWER",
+      "description": "Chip enable; pull low to reset"
+    },
+    {
+      "number": 3,
+      "name": "VP / GPIO36",
+      "type": "ADC",
+      "description": "GPIO 36; ADC1_CH0; input only"
+    },
+    {
+      "number": 4,
+      "name": "VN / GPIO39",
+      "type": "ADC",
+      "description": "GPIO 39; ADC1_CH3; input only"
+    },
+    {
+      "number": 5,
+      "name": "GPIO34",
+      "type": "ADC",
+      "description": "ADC1_CH6; input only"
+    },
+    {
+      "number": 6,
+      "name": "GPIO35",
+      "type": "ADC",
+      "description": "ADC1_CH7; input only"
+    },
+    {
+      "number": 7,
+      "name": "GPIO32",
+      "type": "ADC",
+      "description": "ADC1_CH4; touch 9; PWM-capable"
+    },
+    {
+      "number": 8,
+      "name": "GPIO33",
+      "type": "ADC",
+      "description": "ADC1_CH5; touch 8; PWM-capable"
+    },
+    {
+      "number": 9,
+      "name": "GPIO25",
+      "type": "ADC",
+      "description": "ADC2_CH8; DAC1 output"
+    },
+    {
+      "number": 10,
+      "name": "GPIO26",
+      "type": "ADC",
+      "description": "ADC2_CH9; DAC2 output"
+    },
+    {
+      "number": 11,
+      "name": "GPIO27",
+      "type": "ADC",
+      "description": "ADC2_CH7; touch 7"
+    },
+    {
+      "number": 12,
+      "name": "GPIO14",
+      "type": "GPIO",
+      "description": "GPIO 14; ADC2_CH6; touch 6; HSPI SCK"
+    },
+    {
+      "number": 13,
+      "name": "GPIO12",
+      "type": "GPIO",
+      "description": "GPIO 12; ADC2_CH5; touch 5; HSPI MISO"
+    },
+    {
+      "number": 14,
       "name": "GND",
       "type": "GND",
       "description": "Ground"
     },
     {
-      "number": 3,
-      "name": "D15",
+      "number": 15,
+      "name": "GPIO13",
       "type": "GPIO",
-      "description": "GPIO 15 / ADC2_CH3 / Touch3"
+      "description": "GPIO 13; ADC2_CH4; touch 4; HSPI MOSI"
     },
     {
-      "number": 4,
-      "name": "D2",
+      "number": 16,
+      "name": "SD2 / GPIO9",
       "type": "GPIO",
-      "description": "GPIO 2 / ADC2_CH2 / Touch2 / LED"
+      "description": "GPIO 9; connected to module flash"
     },
     {
-      "number": 5,
-      "name": "D4",
+      "number": 17,
+      "name": "SD3 / GPIO10",
       "type": "GPIO",
-      "description": "GPIO 4 / ADC2_CH0 / Touch0"
+      "description": "GPIO 10; connected to module flash"
+    },
+    {
+      "number": 18,
+      "name": "CMD / GPIO11",
+      "type": "GPIO",
+      "description": "GPIO 11; connected to module flash"
+    },
+    {
+      "number": 19,
+      "name": "5V",
+      "type": "POWER",
+      "description": "USB 5 V input"
+    },
+    {
+      "number": 20,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 21,
+      "name": "GPIO23",
+      "type": "SPI",
+      "description": "GPIO 23; VSPI MOSI"
+    },
+    {
+      "number": 22,
+      "name": "GPIO22",
+      "type": "GPIO",
+      "description": "GPIO 22; I2C SCL"
     },
     {
       "number": 23,
-      "name": "VIN",
-      "type": "Power",
-      "description": "External 5V Power Input"
+      "name": "TX0 / GPIO1",
+      "type": "UART",
+      "description": "GPIO 1; UART0 transmit; USB serial"
+    },
+    {
+      "number": 24,
+      "name": "RX0 / GPIO3",
+      "type": "UART",
+      "description": "GPIO 3; UART0 receive; USB serial"
+    },
+    {
+      "number": 25,
+      "name": "GPIO21",
+      "type": "GPIO",
+      "description": "GPIO 21; I2C SDA"
+    },
+    {
+      "number": 26,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 27,
+      "name": "GPIO19",
+      "type": "SPI",
+      "description": "GPIO 19; VSPI MISO"
+    },
+    {
+      "number": 28,
+      "name": "GPIO18",
+      "type": "SPI",
+      "description": "GPIO 18; VSPI clock"
+    },
+    {
+      "number": 29,
+      "name": "GPIO5",
+      "type": "SPI",
+      "description": "GPIO 5; VSPI chip select"
+    },
+    {
+      "number": 30,
+      "name": "GPIO17",
+      "type": "GPIO",
+      "description": "GPIO 17; UART2 TX"
+    },
+    {
+      "number": 31,
+      "name": "GPIO16",
+      "type": "GPIO",
+      "description": "GPIO 16; UART2 RX"
+    },
+    {
+      "number": 32,
+      "name": "GPIO4",
+      "type": "GPIO",
+      "description": "GPIO 4; ADC2_CH0; touch 0"
+    },
+    {
+      "number": 33,
+      "name": "GPIO0",
+      "type": "GPIO",
+      "description": "GPIO 0; ADC2_CH1; touch 1; boot strapping pin"
+    },
+    {
+      "number": 34,
+      "name": "GPIO2",
+      "type": "GPIO",
+      "description": "GPIO 2; ADC2_CH2; touch 2; boot strapping pin"
+    },
+    {
+      "number": 35,
+      "name": "GPIO15",
+      "type": "GPIO",
+      "description": "GPIO 15; ADC2_CH3; touch 3; boot strapping pin"
+    },
+    {
+      "number": 36,
+      "name": "GPIO8",
+      "type": "GPIO",
+      "description": "GPIO 8; connected to module flash"
+    },
+    {
+      "number": 37,
+      "name": "GPIO7",
+      "type": "GPIO",
+      "description": "GPIO 7; connected to module flash"
+    },
+    {
+      "number": 38,
+      "name": "GPIO6",
+      "type": "GPIO",
+      "description": "GPIO 6; connected to module flash"
     }
   ]
 }

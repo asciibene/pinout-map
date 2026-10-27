@@ -1,0 +1,489 @@
+{
+  "id": "arduino-mega-2560",
+  "name": "Arduino Mega 2560",
+  "category": "Classic AVR",
+  "microcontroller": "ATmega2560",
+  "image": "",
+  "pins": [
+    {
+      "number": 0,
+      "name": "D0",
+      "type": "UART",
+      "description": "Digital 0; UART0 receive"
+    },
+    {
+      "number": 1,
+      "name": "D1",
+      "type": "UART",
+      "description": "Digital 1; UART0 transmit"
+    },
+    {
+      "number": 2,
+      "name": "D2",
+      "type": "GPIO",
+      "description": "Digital I/O 2; PWM"
+    },
+    {
+      "number": 3,
+      "name": "D3",
+      "type": "GPIO",
+      "description": "Digital I/O 3; PWM"
+    },
+    {
+      "number": 4,
+      "name": "D4",
+      "type": "GPIO",
+      "description": "Digital I/O 4; PWM"
+    },
+    {
+      "number": 5,
+      "name": "D5",
+      "type": "GPIO",
+      "description": "Digital I/O 5; PWM"
+    },
+    {
+      "number": 6,
+      "name": "D6",
+      "type": "GPIO",
+      "description": "Digital I/O 6; PWM"
+    },
+    {
+      "number": 7,
+      "name": "D7",
+      "type": "GPIO",
+      "description": "Digital I/O 7; PWM"
+    },
+    {
+      "number": 8,
+      "name": "D8",
+      "type": "GPIO",
+      "description": "Digital I/O 8; PWM"
+    },
+    {
+      "number": 9,
+      "name": "D9",
+      "type": "GPIO",
+      "description": "Digital I/O 9; PWM"
+    },
+    {
+      "number": 10,
+      "name": "D10",
+      "type": "GPIO",
+      "description": "Digital I/O 10; PWM"
+    },
+    {
+      "number": 11,
+      "name": "D11",
+      "type": "GPIO",
+      "description": "Digital I/O 11; PWM"
+    },
+    {
+      "number": 12,
+      "name": "D12",
+      "type": "GPIO",
+      "description": "Digital I/O 12; PWM"
+    },
+    {
+      "number": 13,
+      "name": "D13",
+      "type": "GPIO",
+      "description": "Digital I/O 13; PWM"
+    },
+    {
+      "number": 14,
+      "name": "D14",
+      "type": "UART",
+      "description": "Digital 14; UART3 transmit"
+    },
+    {
+      "number": 15,
+      "name": "D15",
+      "type": "UART",
+      "description": "Digital 15; UART3 receive"
+    },
+    {
+      "number": 16,
+      "name": "D16",
+      "type": "UART",
+      "description": "Digital 16; UART2 transmit"
+    },
+    {
+      "number": 17,
+      "name": "D17",
+      "type": "UART",
+      "description": "Digital 17; UART2 receive"
+    },
+    {
+      "number": 18,
+      "name": "D18",
+      "type": "UART",
+      "description": "Digital 18; UART1 transmit"
+    },
+    {
+      "number": 19,
+      "name": "D19",
+      "type": "UART",
+      "description": "Digital 19; UART1 receive"
+    },
+    {
+      "number": 20,
+      "name": "D20",
+      "type": "GPIO",
+      "description": "Digital I/O 20"
+    },
+    {
+      "number": 21,
+      "name": "D21",
+      "type": "GPIO",
+      "description": "Digital I/O 21"
+    },
+    {
+      "number": 22,
+      "name": "D22",
+      "type": "GPIO",
+      "description": "Digital I/O 22"
+    },
+    {
+      "number": 23,
+      "name": "D23",
+      "type": "GPIO",
+      "description": "Digital I/O 23"
+    },
+    {
+      "number": 24,
+      "name": "D24",
+      "type": "GPIO",
+      "description": "Digital I/O 24"
+    },
+    {
+      "number": 25,
+      "name": "D25",
+      "type": "GPIO",
+      "description": "Digital I/O 25"
+    },
+    {
+      "number": 26,
+      "name": "D26",
+      "type": "GPIO",
+      "description": "Digital I/O 26"
+    },
+    {
+      "number": 27,
+      "name": "D27",
+      "type": "GPIO",
+      "description": "Digital I/O 27"
+    },
+    {
+      "number": 28,
+      "name": "D28",
+      "type": "GPIO",
+      "description": "Digital I/O 28"
+    },
+    {
+      "number": 29,
+      "name": "D29",
+      "type": "GPIO",
+      "description": "Digital I/O 29"
+    },
+    {
+      "number": 30,
+      "name": "D30",
+      "type": "GPIO",
+      "description": "Digital I/O 30"
+    },
+    {
+      "number": 31,
+      "name": "D31",
+      "type": "GPIO",
+      "description": "Digital I/O 31"
+    },
+    {
+      "number": 32,
+      "name": "D32",
+      "type": "GPIO",
+      "description": "Digital I/O 32"
+    },
+    {
+      "number": 33,
+      "name": "D33",
+      "type": "GPIO",
+      "description": "Digital I/O 33"
+    },
+    {
+      "number": 34,
+      "name": "D34",
+      "type": "GPIO",
+      "description": "Digital I/O 34"
+    },
+    {
+      "number": 35,
+      "name": "D35",
+      "type": "GPIO",
+      "description": "Digital I/O 35"
+    },
+    {
+      "number": 36,
+      "name": "D36",
+      "type": "GPIO",
+      "description": "Digital I/O 36"
+    },
+    {
+      "number": 37,
+      "name": "D37",
+      "type": "GPIO",
+      "description": "Digital I/O 37"
+    },
+    {
+      "number": 38,
+      "name": "D38",
+      "type": "GPIO",
+      "description": "Digital I/O 38"
+    },
+    {
+      "number": 39,
+      "name": "D39",
+      "type": "GPIO",
+      "description": "Digital I/O 39"
+    },
+    {
+      "number": 40,
+      "name": "D40",
+      "type": "GPIO",
+      "description": "Digital I/O 40"
+    },
+    {
+      "number": 41,
+      "name": "D41",
+      "type": "GPIO",
+      "description": "Digital I/O 41"
+    },
+    {
+      "number": 42,
+      "name": "D42",
+      "type": "GPIO",
+      "description": "Digital I/O 42"
+    },
+    {
+      "number": 43,
+      "name": "D43",
+      "type": "GPIO",
+      "description": "Digital I/O 43"
+    },
+    {
+      "number": 44,
+      "name": "D44",
+      "type": "GPIO",
+      "description": "Digital I/O 44; PWM"
+    },
+    {
+      "number": 45,
+      "name": "D45",
+      "type": "GPIO",
+      "description": "Digital I/O 45; PWM"
+    },
+    {
+      "number": 46,
+      "name": "D46",
+      "type": "GPIO",
+      "description": "Digital I/O 46; PWM"
+    },
+    {
+      "number": 47,
+      "name": "D47",
+      "type": "GPIO",
+      "description": "Digital I/O 47"
+    },
+    {
+      "number": 48,
+      "name": "D48",
+      "type": "GPIO",
+      "description": "Digital I/O 48"
+    },
+    {
+      "number": 49,
+      "name": "D49",
+      "type": "GPIO",
+      "description": "Digital I/O 49"
+    },
+    {
+      "number": 50,
+      "name": "D50 / MISO",
+      "type": "SPI",
+      "description": "Digital 50; SPI MISO"
+    },
+    {
+      "number": 51,
+      "name": "D51 / MOSI",
+      "type": "SPI",
+      "description": "Digital 51; SPI MOSI"
+    },
+    {
+      "number": 52,
+      "name": "D52 / SCK",
+      "type": "SPI",
+      "description": "Digital 52; SPI SCK"
+    },
+    {
+      "number": 53,
+      "name": "D53 / SS",
+      "type": "SPI",
+      "description": "Digital 53; SPI SS"
+    },
+    {
+      "number": 54,
+      "name": "A0",
+      "type": "ADC",
+      "description": "Analog input 0; also digital 54"
+    },
+    {
+      "number": 55,
+      "name": "A1",
+      "type": "ADC",
+      "description": "Analog input 1; also digital 55"
+    },
+    {
+      "number": 56,
+      "name": "A2",
+      "type": "ADC",
+      "description": "Analog input 2; also digital 56"
+    },
+    {
+      "number": 57,
+      "name": "A3",
+      "type": "ADC",
+      "description": "Analog input 3; also digital 57"
+    },
+    {
+      "number": 58,
+      "name": "A4",
+      "type": "ADC",
+      "description": "Analog input 4; also digital 58"
+    },
+    {
+      "number": 59,
+      "name": "A5",
+      "type": "ADC",
+      "description": "Analog input 5; also digital 59"
+    },
+    {
+      "number": 60,
+      "name": "A6",
+      "type": "ADC",
+      "description": "Analog input 6; also digital 60"
+    },
+    {
+      "number": 61,
+      "name": "A7",
+      "type": "ADC",
+      "description": "Analog input 7; also digital 61"
+    },
+    {
+      "number": 62,
+      "name": "A8",
+      "type": "ADC",
+      "description": "Analog input 8; also digital 62"
+    },
+    {
+      "number": 63,
+      "name": "A9",
+      "type": "ADC",
+      "description": "Analog input 9; also digital 63"
+    },
+    {
+      "number": 64,
+      "name": "A10",
+      "type": "ADC",
+      "description": "Analog input 10; also digital 64"
+    },
+    {
+      "number": 65,
+      "name": "A11",
+      "type": "ADC",
+      "description": "Analog input 11; also digital 65"
+    },
+    {
+      "number": 66,
+      "name": "A12",
+      "type": "ADC",
+      "description": "Analog input 12; also digital 66"
+    },
+    {
+      "number": 67,
+      "name": "A13",
+      "type": "ADC",
+      "description": "Analog input 13; also digital 67"
+    },
+    {
+      "number": 68,
+      "name": "A14",
+      "type": "ADC",
+      "description": "Analog input 14; also digital 68"
+    },
+    {
+      "number": 69,
+      "name": "A15",
+      "type": "ADC",
+      "description": "Analog input 15; also digital 69"
+    },
+    {
+      "number": 70,
+      "name": "IOREF",
+      "type": "POWER",
+      "description": "Logic voltage reference for shields"
+    },
+    {
+      "number": 71,
+      "name": "RESET",
+      "type": "POWER",
+      "description": "Reset input, active low"
+    },
+    {
+      "number": 72,
+      "name": "3V3",
+      "type": "POWER",
+      "description": "3.3 V output"
+    },
+    {
+      "number": 73,
+      "name": "5V",
+      "type": "POWER",
+      "description": "5 V output"
+    },
+    {
+      "number": 74,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 75,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 76,
+      "name": "VIN",
+      "type": "POWER",
+      "description": "External supply input"
+    },
+    {
+      "number": 77,
+      "name": "SDA",
+      "type": "GPIO",
+      "description": "I2C data; duplicates D20"
+    },
+    {
+      "number": 78,
+      "name": "SCL",
+      "type": "GPIO",
+      "description": "I2C clock; duplicates D21"
+    },
+    {
+      "number": 79,
+      "name": "AREF",
+      "type": "POWER",
+      "description": "Analog reference input"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "id": "esp8266-nodemcu-v1",
+  "name": "ESP8266 NodeMCU v1.0",
+  "category": "Wi-Fi microcontrollers",
+  "microcontroller": "ESP8266EX",
+  "image": "",
+  "pins": [
+    {
+      "number": 1,
+      "name": "A0",
+      "type": "ADC",
+      "description": "Analog input; ESP8266 ADC input, board input range varies by revision"
+    },
+    {
+      "number": 2,
+      "name": "RSV1",
+      "type": "GPIO",
+      "description": "Reserved pad; not a user GPIO"
+    },
+    {
+      "number": 3,
+      "name": "RSV2",
+      "type": "GPIO",
+      "description": "Reserved pad; not a user GPIO"
+    },
+    {
+      "number": 4,
+      "name": "SD3 / GPIO10",
+      "type": "GPIO",
+      "description": "GPIO 10; SDIO flash interface"
+    },
+    {
+      "number": 5,
+      "name": "SD2 / GPIO9",
+      "type": "GPIO",
+      "description": "GPIO 9; SDIO flash interface"
+    },
+    {
+      "number": 6,
+      "name": "SD1 / GPIO8",
+      "type": "GPIO",
+      "description": "GPIO 8; SDIO flash interface"
+    },
+    {
+      "number": 7,
+      "name": "CMD / GPIO11",
+      "type": "GPIO",
+      "description": "GPIO 11; SDIO flash interface"
+    },
+    {
+      "number": 8,
+      "name": "SD0 / GPIO7",
+      "type": "GPIO",
+      "description": "GPIO 7; SDIO flash interface"
+    },
+    {
+      "number": 9,
+      "name": "CLK / GPIO6",
+      "type": "GPIO",
+      "description": "GPIO 6; SDIO flash interface"
+    },
+    {
+      "number": 10,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 11,
+      "name": "3V3",
+      "type": "POWER",
+      "description": "3.3 V regulated output"
+    },
+    {
+      "number": 12,
+      "name": "EN / CH_PD",
+      "type": "POWER",
+      "description": "Chip enable; high for normal operation"
+    },
+    {
+      "number": 13,
+      "name": "RST",
+      "type": "POWER",
+      "description": "Reset input, active low"
+    },
+    {
+      "number": 14,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 15,
+      "name": "VIN",
+      "type": "POWER",
+      "description": "USB/VIN supply input; board regulator input"
+    },
+    {
+      "number": 16,
+      "name": "D0 / GPIO16",
+      "type": "GPIO",
+      "description": "GPIO 16; deep-sleep wake; no PWM or interrupt on standard core"
+    },
+    {
+      "number": 17,
+      "name": "D1 / GPIO5",
+      "type": "GPIO",
+      "description": "GPIO 5; I2C SCL convention"
+    },
+    {
+      "number": 18,
+      "name": "D2 / GPIO4",
+      "type": "GPIO",
+      "description": "GPIO 4; I2C SDA convention"
+    },
+    {
+      "number": 19,
+      "name": "D3 / GPIO0",
+      "type": "GPIO",
+      "description": "GPIO 0; boot strapping pin"
+    },
+    {
+      "number": 20,
+      "name": "D4 / GPIO2",
+      "type": "GPIO",
+      "description": "GPIO 2; boot strapping pin; onboard LED on common boards"
+    },
+    {
+      "number": 21,
+      "name": "3V3",
+      "type": "POWER",
+      "description": "3.3 V regulated output"
+    },
+    {
+      "number": 22,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 23,
+      "name": "D5 / GPIO14",
+      "type": "SPI",
+      "description": "GPIO 14; HSPI clock"
+    },
+    {
+      "number": 24,
+      "name": "D6 / GPIO12",
+      "type": "SPI",
+      "description": "GPIO 12; HSPI MISO"
+    },
+    {
+      "number": 25,
+      "name": "D7 / GPIO13",
+      "type": "SPI",
+      "description": "GPIO 13; HSPI MOSI"
+    },
+    {
+      "number": 26,
+      "name": "D8 / GPIO15",
+      "type": "SPI",
+      "description": "GPIO 15; HSPI chip select; boot strapping pin"
+    },
+    {
+      "number": 27,
+      "name": "RX / GPIO3",
+      "type": "UART",
+      "description": "UART0 receive"
+    },
+    {
+      "number": 28,
+      "name": "TX / GPIO1",
+      "type": "UART",
+      "description": "UART0 transmit"
+    },
+    {
+      "number": 29,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 30,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    }
+  ]
+}

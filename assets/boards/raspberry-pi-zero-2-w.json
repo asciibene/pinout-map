@@ -1,0 +1,249 @@
+{
+  "id": "raspberry-pi-zero-2-w",
+  "name": "Raspberry Pi Zero 2 W",
+  "category": "Single-board computers",
+  "microcontroller": "Broadcom BCM2710A1, quad-core 64-bit SoC",
+  "image": "",
+  "pins": [
+    {
+      "number": 1,
+      "name": "3V3",
+      "type": "POWER",
+      "description": "3.3 V power rail"
+    },
+    {
+      "number": 2,
+      "name": "5V",
+      "type": "POWER",
+      "description": "5 V power rail"
+    },
+    {
+      "number": 3,
+      "name": "GPIO2 / SDA1",
+      "type": "GPIO",
+      "description": "GPIO 2; I2C1 SDA"
+    },
+    {
+      "number": 4,
+      "name": "5V",
+      "type": "POWER",
+      "description": "5 V power rail"
+    },
+    {
+      "number": 5,
+      "name": "GPIO3 / SCL1",
+      "type": "GPIO",
+      "description": "GPIO 3; I2C1 SCL"
+    },
+    {
+      "number": 6,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 7,
+      "name": "GPIO4 / GPCLK0",
+      "type": "GPIO",
+      "description": "GPIO 4; general-purpose clock 0"
+    },
+    {
+      "number": 8,
+      "name": "GPIO14 / TXD",
+      "type": "UART",
+      "description": "GPIO 14; UART0 TX"
+    },
+    {
+      "number": 9,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 10,
+      "name": "GPIO15 / RXD",
+      "type": "UART",
+      "description": "GPIO 15; UART0 RX"
+    },
+    {
+      "number": 11,
+      "name": "GPIO17",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O"
+    },
+    {
+      "number": 12,
+      "name": "GPIO18 / PCM_CLK",
+      "type": "GPIO",
+      "description": "GPIO 18; PCM/I2S clock; PWM-capable"
+    },
+    {
+      "number": 13,
+      "name": "GPIO27",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O"
+    },
+    {
+      "number": 14,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 15,
+      "name": "GPIO22",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O"
+    },
+    {
+      "number": 16,
+      "name": "GPIO23",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O"
+    },
+    {
+      "number": 17,
+      "name": "3V3",
+      "type": "POWER",
+      "description": "3.3 V power rail"
+    },
+    {
+      "number": 18,
+      "name": "GPIO24",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O"
+    },
+    {
+      "number": 19,
+      "name": "GPIO10 / MOSI",
+      "type": "SPI",
+      "description": "GPIO 10; SPI0 MOSI"
+    },
+    {
+      "number": 20,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 21,
+      "name": "GPIO9 / MISO",
+      "type": "SPI",
+      "description": "GPIO 9; SPI0 MISO"
+    },
+    {
+      "number": 22,
+      "name": "GPIO25",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O"
+    },
+    {
+      "number": 23,
+      "name": "GPIO11 / SCLK",
+      "type": "SPI",
+      "description": "GPIO 11; SPI0 clock"
+    },
+    {
+      "number": 24,
+      "name": "GPIO8 / CE0",
+      "type": "SPI",
+      "description": "GPIO 8; SPI0 chip select 0"
+    },
+    {
+      "number": 25,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 26,
+      "name": "GPIO7 / CE1",
+      "type": "SPI",
+      "description": "GPIO 7; SPI0 chip select 1"
+    },
+    {
+      "number": 27,
+      "name": "GPIO0 / ID_SD",
+      "type": "GPIO",
+      "description": "HAT ID EEPROM data; reserved for HAT identification"
+    },
+    {
+      "number": 28,
+      "name": "GPIO1 / ID_SC",
+      "type": "GPIO",
+      "description": "HAT ID EEPROM clock; reserved for HAT identification"
+    },
+    {
+      "number": 29,
+      "name": "GPIO5",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O"
+    },
+    {
+      "number": 30,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 31,
+      "name": "GPIO6",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O"
+    },
+    {
+      "number": 32,
+      "name": "GPIO12",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; PWM-capable"
+    },
+    {
+      "number": 33,
+      "name": "GPIO13",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; PWM-capable"
+    },
+    {
+      "number": 34,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 35,
+      "name": "GPIO19 / PCM_FS",
+      "type": "GPIO",
+      "description": "GPIO 19; PCM/I2S frame sync; SPI1 MISO"
+    },
+    {
+      "number": 36,
+      "name": "GPIO16",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O"
+    },
+    {
+      "number": 37,
+      "name": "GPIO26",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O"
+    },
+    {
+      "number": 38,
+      "name": "GPIO20 / PCM_DIN",
+      "type": "GPIO",
+      "description": "GPIO 20; PCM/I2S data in; SPI1 MOSI"
+    },
+    {
+      "number": 39,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 40,
+      "name": "GPIO21 / PCM_DOUT",
+      "type": "GPIO",
+      "description": "GPIO 21; PCM/I2S data out; SPI1 clock"
+    }
+  ]
+}

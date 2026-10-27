@@ -1,0 +1,249 @@
+{
+  "id": "raspberry-pi-pico-w",
+  "name": "Raspberry Pi Pico W",
+  "category": "Microcontrollers / Wi-Fi",
+  "microcontroller": "RP2040 dual-core ARM Cortex-M0+ with CYW43439",
+  "image": "",
+  "pins": [
+    {
+      "number": 1,
+      "name": "GP0",
+      "type": "UART",
+      "description": "GPIO 0; UART0 TX; SPI0 RX; I2C0 SDA"
+    },
+    {
+      "number": 2,
+      "name": "GP1",
+      "type": "UART",
+      "description": "GPIO 1; UART0 RX; SPI0 CSn; I2C0 SCL"
+    },
+    {
+      "number": 3,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 4,
+      "name": "GP2",
+      "type": "SPI",
+      "description": "GPIO 2; SPI0 SCK; I2C1 SDA"
+    },
+    {
+      "number": 5,
+      "name": "GP3",
+      "type": "SPI",
+      "description": "GPIO 3; SPI0 TX; I2C1 SCL"
+    },
+    {
+      "number": 6,
+      "name": "GP4",
+      "type": "SPI",
+      "description": "GPIO 4; SPI0 RX; I2C0 SDA"
+    },
+    {
+      "number": 7,
+      "name": "GP5",
+      "type": "SPI",
+      "description": "GPIO 5; SPI0 CSn; I2C0 SCL"
+    },
+    {
+      "number": 8,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 9,
+      "name": "GP6",
+      "type": "GPIO",
+      "description": "GPIO 6; SPI0 SCK; I2C1 SDA"
+    },
+    {
+      "number": 10,
+      "name": "GP7",
+      "type": "GPIO",
+      "description": "GPIO 7; SPI0 TX; I2C1 SCL"
+    },
+    {
+      "number": 11,
+      "name": "GP8",
+      "type": "GPIO",
+      "description": "GPIO 8; SPI1 RX; I2C0 SDA"
+    },
+    {
+      "number": 12,
+      "name": "GP9",
+      "type": "GPIO",
+      "description": "GPIO 9; SPI1 CSn; I2C0 SCL"
+    },
+    {
+      "number": 13,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 14,
+      "name": "GP10",
+      "type": "GPIO",
+      "description": "GPIO 10; SPI1 SCK; I2C1 SDA"
+    },
+    {
+      "number": 15,
+      "name": "GP11",
+      "type": "GPIO",
+      "description": "GPIO 11; SPI1 TX; I2C1 SCL"
+    },
+    {
+      "number": 16,
+      "name": "GP12",
+      "type": "GPIO",
+      "description": "GPIO 12; SPI1 RX; I2C0 SDA"
+    },
+    {
+      "number": 17,
+      "name": "GP13",
+      "type": "GPIO",
+      "description": "GPIO 13; SPI1 CSn; I2C0 SCL"
+    },
+    {
+      "number": 18,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 19,
+      "name": "GP14",
+      "type": "GPIO",
+      "description": "GPIO 14; SPI1 SCK; I2C1 SDA"
+    },
+    {
+      "number": 20,
+      "name": "GP15",
+      "type": "GPIO",
+      "description": "GPIO 15; SPI1 TX; I2C1 SCL"
+    },
+    {
+      "number": 21,
+      "name": "GP16",
+      "type": "GPIO",
+      "description": "GPIO 16; SPI0 RX; I2C0 SDA"
+    },
+    {
+      "number": 22,
+      "name": "GP17",
+      "type": "GPIO",
+      "description": "GPIO 17; SPI0 CSn; I2C0 SCL"
+    },
+    {
+      "number": 23,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 24,
+      "name": "GP18",
+      "type": "GPIO",
+      "description": "GPIO 18; SPI0 SCK; I2C1 SDA"
+    },
+    {
+      "number": 25,
+      "name": "GP19",
+      "type": "GPIO",
+      "description": "GPIO 19; SPI0 TX; I2C1 SCL"
+    },
+    {
+      "number": 26,
+      "name": "GP20",
+      "type": "GPIO",
+      "description": "GPIO 20; SPI0 RX; I2C0 SDA"
+    },
+    {
+      "number": 27,
+      "name": "GP21",
+      "type": "GPIO",
+      "description": "GPIO 21; SPI0 CSn; I2C0 SCL"
+    },
+    {
+      "number": 28,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 29,
+      "name": "GP22",
+      "type": "GPIO",
+      "description": "GPIO 22; SPI0 SCK; I2C1 SDA"
+    },
+    {
+      "number": 30,
+      "name": "RUN",
+      "type": "POWER",
+      "description": "RP2040 reset; pull low to reset the board"
+    },
+    {
+      "number": 31,
+      "name": "GP26 / ADC0",
+      "type": "ADC",
+      "description": "GPIO 26; ADC0; SPI1 SCK; I2C1 SDA"
+    },
+    {
+      "number": 32,
+      "name": "GP27 / ADC1",
+      "type": "ADC",
+      "description": "GPIO 27; ADC1; SPI1 TX; I2C1 SCL"
+    },
+    {
+      "number": 33,
+      "name": "AGND",
+      "type": "GND",
+      "description": "Analog ground"
+    },
+    {
+      "number": 34,
+      "name": "GP28 / ADC2",
+      "type": "ADC",
+      "description": "GPIO 28; ADC2; SPI1 RX; I2C0 SDA"
+    },
+    {
+      "number": 35,
+      "name": "ADC_VREF",
+      "type": "POWER",
+      "description": "ADC reference voltage input"
+    },
+    {
+      "number": 36,
+      "name": "3V3_OUT",
+      "type": "POWER",
+      "description": "Regulated 3.3 V output"
+    },
+    {
+      "number": 37,
+      "name": "3V3_EN",
+      "type": "POWER",
+      "description": "3.3 V regulator enable; pull low to disable"
+    },
+    {
+      "number": 38,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 39,
+      "name": "VSYS",
+      "type": "POWER",
+      "description": "System supply input, 1.8-5.5 V"
+    },
+    {
+      "number": 40,
+      "name": "VBUS",
+      "type": "POWER",
+      "description": "USB 5 V supply"
+    }
+  ]
+}

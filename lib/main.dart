@@ -88,7 +88,7 @@ class _AdBannerState extends State<AdBanner> {
 class Pin {
   final int number;
   final String name;
-  final String type; // 'Power', 'GND', 'GPIO', 'ADC'
+  final String type;
   final String description;
 
   const Pin({
@@ -346,11 +346,19 @@ class BoardCard extends StatelessWidget {
                       child: ColoredBox(
                         color: const Color(0xFF171717),
                         child: SizedBox.expand(
-                          child: Image.asset(
-                            board.imageAsset,
-                            fit: BoxFit.contain,
-                            semanticLabel: '${board.name} board',
-                          ),
+                          child: board.imageAsset.isEmpty
+                              ? const Center(
+                                  child: Icon(
+                                    Icons.developer_board,
+                                    size: 48,
+                                    color: Colors.blueGrey,
+                                  ),
+                                )
+                              : Image.asset(
+                                  board.imageAsset,
+                                  fit: BoxFit.contain,
+                                  semanticLabel: '${board.name} board',
+                                ),
                         ),
                       ),
                     ),

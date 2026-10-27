@@ -1,0 +1,93 @@
+{
+  "id": "seeed-xiao-rp2040",
+  "name": "Seeed XIAO RP2040",
+  "category": "Microcontrollers",
+  "microcontroller": "RP2040 dual-core ARM Cortex-M0+",
+  "image": "",
+  "pins": [
+    {
+      "number": 1,
+      "name": "D0 / A0 / GPIO26",
+      "type": "ADC",
+      "description": "GPIO 26; ADC0; analog input"
+    },
+    {
+      "number": 2,
+      "name": "D1 / A1 / GPIO27",
+      "type": "ADC",
+      "description": "GPIO 27; ADC1; analog input"
+    },
+    {
+      "number": 3,
+      "name": "D2 / A2 / GPIO28",
+      "type": "ADC",
+      "description": "GPIO 28; ADC2; analog input"
+    },
+    {
+      "number": 4,
+      "name": "D3 / A3 / GPIO29",
+      "type": "ADC",
+      "description": "GPIO 29; ADC3; analog input"
+    },
+    {
+      "number": 5,
+      "name": "D4 / SDA / GPIO6",
+      "type": "GPIO",
+      "description": "GPIO 6; I2C0 SDA"
+    },
+    {
+      "number": 6,
+      "name": "D5 / SCL / GPIO7",
+      "type": "GPIO",
+      "description": "GPIO 7; I2C0 SCL"
+    },
+    {
+      "number": 7,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 8,
+      "name": "5V",
+      "type": "POWER",
+      "description": "USB 5 V supply"
+    },
+    {
+      "number": 9,
+      "name": "3V3",
+      "type": "POWER",
+      "description": "Regulated 3.3 V output"
+    },
+    {
+      "number": 10,
+      "name": "D6 / TX / GPIO0",
+      "type": "UART",
+      "description": "GPIO 0; UART0 transmit"
+    },
+    {
+      "number": 11,
+      "name": "D7 / RX / GPIO1",
+      "type": "UART",
+      "description": "GPIO 1; UART0 receive"
+    },
+    {
+      "number": 12,
+      "name": "D8 / SCK / GPIO2",
+      "type": "SPI",
+      "description": "GPIO 2; SPI0 clock"
+    },
+    {
+      "number": 13,
+      "name": "D9 / MISO / GPIO4",
+      "type": "SPI",
+      "description": "GPIO 4; SPI0 MISO"
+    },
+    {
+      "number": 14,
+      "name": "D10 / MOSI / GPIO3",
+      "type": "SPI",
+      "description": "GPIO 3; SPI0 MOSI"
+    }
+  ]
+}

@@ -14,6 +14,7 @@ Each file must have this structure:
   "name": "Board name",
   "category": "Board category",
   "microcontroller": "Microcontroller name",
+  "image": "assets/images/boards/board.jpg",
   "pins": [
     {
       "number": 1,
@@ -24,6 +25,13 @@ Each file must have this structure:
   ]
 }
 ```
+
+`number` is a board-specific pin index; on Raspberry Pi and Pico boards it is
+the physical header position. `name` retains the board's printed pin label.
+`type` is one of
+`POWER`, `GND`, `ADC`, `UART`, `SPI`, or `GPIO`; `description` can include
+additional multiplexed functions. Set `image` to an empty string when no
+matching board image is available.
 
 ## Getting Started
 
