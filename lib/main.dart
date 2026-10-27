@@ -246,8 +246,8 @@ class _BoardListScreenState extends State<BoardListScreen> {
       case _BoardMenuAction.about:
         showAboutDialog(
           context: context,
-          applicationName: 'Pinout Workbench',
-          applicationVersion: '0.0.0',
+          applicationName: 'Pinout Map',
+          applicationVersion: '0.3.0',
           children: const [
             Text('created by ASCII BENE'),
           ],
@@ -256,7 +256,7 @@ class _BoardListScreenState extends State<BoardListScreen> {
       case _BoardMenuAction.licenses:
         showLicensePage(
           context: context,
-          applicationName: 'Pinout Workbench',
+          applicationName: 'Pinout Map',
         );
         break;
     }
@@ -266,7 +266,7 @@ class _BoardListScreenState extends State<BoardListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Pinout Workbench'),
+        title: const Text('Pinout Map'),
         centerTitle: true,
         actions: [
           PopupMenuButton<_BoardMenuAction>(
@@ -621,7 +621,7 @@ class BoardDetailScreen extends StatelessWidget {
                       style: TextStyle(color: Colors.grey[400], fontSize: 12),
                     ),
                     trailing: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                       decoration: BoxDecoration(
                         border: Border.all(color: pinColor),
                         borderRadius: BorderRadius.circular(4),
