@@ -221,7 +221,7 @@ enum _BoardMenuAction { switchView, about, licenses }
 
 class _BoardListScreenState extends State<BoardListScreen> {
   String _searchQuery = '';
-  bool _isGridView = true;
+  bool _isGridView = false;
   late final Future<List<Board>> _boardsFuture;
 
   @override
@@ -247,11 +247,9 @@ class _BoardListScreenState extends State<BoardListScreen> {
         showAboutDialog(
           context: context,
           applicationName: 'Pinout Workbench',
-          applicationVersion: '1.0.0',
+          applicationVersion: '0.0.0',
           children: const [
-            Text(
-              'Browse development board pinouts, search pin functions, and '
-              'identify power, ground, analog, serial, and digital pins.',
+            Text('created by ASCII BENE','2026'
             ),
           ],
         );
