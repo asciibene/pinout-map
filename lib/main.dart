@@ -539,7 +539,6 @@ class BoardCard extends StatelessWidget {
 class BoardDetailScreen extends StatelessWidget {
   final Board board;
   const BoardDetailScreen({super.key, required this.board});
-
   Color _getPinColor(String type) {
     switch (type.toUpperCase()) {
       case 'POWER':
@@ -548,6 +547,8 @@ class BoardDetailScreen extends StatelessWidget {
         return Colors.grey;
       case 'ADC':
         return Colors.yellowAccent;
+      case 'CTRL' :
+        return Colors.beigeAccent;
       case 'UART':
         return Colors.greenAccent;
       case 'SPI' :
