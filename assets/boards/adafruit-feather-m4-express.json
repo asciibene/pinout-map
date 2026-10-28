@@ -1,0 +1,189 @@
+{
+  "id": "adafruit-feather-m4-express",
+  "name": "Adafruit Feather M4 Express",
+  "category": "Microcontrollers / Feather form factor",
+  "microcontroller": "SAMD51J19, 120 MHz Arm Cortex-M4F; 3.3 V logic",
+  "image": "",
+  "pins": [
+    {
+      "number": 1,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 2,
+      "name": "BAT",
+      "type": "POWER",
+      "description": "LiPo battery positive input"
+    },
+    {
+      "number": 3,
+      "name": "USB",
+      "type": "POWER",
+      "description": "USB VBUS; nominal 5 V"
+    },
+    {
+      "number": 4,
+      "name": "EN",
+      "type": "CTRL",
+      "description": "Regulator enable; active level depends on Feather design"
+    },
+    {
+      "number": 5,
+      "name": "3V",
+      "type": "POWER",
+      "description": "Regulated 3.3 V output"
+    },
+    {
+      "number": 6,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 7,
+      "name": "D0 / RX",
+      "type": "UART",
+      "description": "Hardware serial receive"
+    },
+    {
+      "number": 8,
+      "name": "D1 / TX",
+      "type": "UART",
+      "description": "Hardware serial transmit"
+    },
+    {
+      "number": 9,
+      "name": "D2 / SDA",
+      "type": "GPIO",
+      "description": "Digital I/O; I2C data on common Feather mapping"
+    },
+    {
+      "number": 10,
+      "name": "D3 / SCL",
+      "type": "GPIO",
+      "description": "Digital I/O; I2C clock on common Feather mapping"
+    },
+    {
+      "number": 11,
+      "name": "D4",
+      "type": "GPIO",
+      "description": "Digital I/O"
+    },
+    {
+      "number": 12,
+      "name": "D5",
+      "type": "GPIO",
+      "description": "Digital I/O; PWM on supported MCU"
+    },
+    {
+      "number": 13,
+      "name": "D6",
+      "type": "GPIO",
+      "description": "Digital I/O; PWM on supported MCU"
+    },
+    {
+      "number": 14,
+      "name": "D9",
+      "type": "GPIO",
+      "description": "Digital I/O; PWM on supported MCU"
+    },
+    {
+      "number": 15,
+      "name": "D10 / SS",
+      "type": "SPI",
+      "description": "SPI chip select"
+    },
+    {
+      "number": 16,
+      "name": "D11 / MOSI",
+      "type": "SPI",
+      "description": "SPI MOSI"
+    },
+    {
+      "number": 17,
+      "name": "D12 / MISO",
+      "type": "SPI",
+      "description": "SPI MISO"
+    },
+    {
+      "number": 18,
+      "name": "D13 / SCK",
+      "type": "SPI",
+      "description": "SPI clock; onboard LED on common Feather boards"
+    },
+    {
+      "number": 19,
+      "name": "A0",
+      "type": "ADC",
+      "description": "Analog input; range depends on Feather MCU"
+    },
+    {
+      "number": 20,
+      "name": "A1",
+      "type": "ADC",
+      "description": "Analog input"
+    },
+    {
+      "number": 21,
+      "name": "A2",
+      "type": "ADC",
+      "description": "Analog input"
+    },
+    {
+      "number": 22,
+      "name": "A3",
+      "type": "ADC",
+      "description": "Analog input"
+    },
+    {
+      "number": 23,
+      "name": "A4",
+      "type": "ADC",
+      "description": "Analog input"
+    },
+    {
+      "number": 24,
+      "name": "A5",
+      "type": "ADC",
+      "description": "Analog input"
+    },
+    {
+      "number": 25,
+      "name": "SDA",
+      "type": "GPIO",
+      "description": "I2C data; board-specific GPIO mapping"
+    },
+    {
+      "number": 26,
+      "name": "SCL",
+      "type": "GPIO",
+      "description": "I2C clock; board-specific GPIO mapping"
+    },
+    {
+      "number": 27,
+      "name": "SCK",
+      "type": "SPI",
+      "description": "SPI clock; board-specific GPIO mapping"
+    },
+    {
+      "number": 28,
+      "name": "MOSI",
+      "type": "SPI",
+      "description": "SPI MOSI; board-specific GPIO mapping"
+    },
+    {
+      "number": 29,
+      "name": "MISO",
+      "type": "SPI",
+      "description": "SPI MISO; board-specific GPIO mapping"
+    },
+    {
+      "number": 30,
+      "name": "RST",
+      "type": "CTRL",
+      "description": "Active-low reset input"
+    }
+  ]
+}

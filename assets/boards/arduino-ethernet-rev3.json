@@ -1,0 +1,225 @@
+{
+  "id": "arduino-ethernet-rev3",
+  "name": "Arduino Ethernet Rev3",
+  "category": "Classic AVR / Ethernet",
+  "microcontroller": "ATmega328P, 16 MHz, 8-bit AVR; W5100 Ethernet controller",
+  "image": "",
+  "pins": [
+    {
+      "number": 0,
+      "name": "D0 / RX",
+      "type": "UART",
+      "description": "Digital 0; UART0 receive; UNO-compatible header signal"
+    },
+    {
+      "number": 1,
+      "name": "D1 / TX",
+      "type": "UART",
+      "description": "Digital 1; UART0 transmit; UNO-compatible header signal"
+    },
+    {
+      "number": 2,
+      "name": "D2",
+      "type": "GPIO",
+      "description": "Digital I/O 2; UNO-compatible header signal"
+    },
+    {
+      "number": 3,
+      "name": "D3",
+      "type": "GPIO",
+      "description": "Digital I/O 3; PWM; UNO-compatible header signal"
+    },
+    {
+      "number": 4,
+      "name": "D4",
+      "type": "GPIO",
+      "description": "Digital I/O 4; UNO-compatible header signal"
+    },
+    {
+      "number": 5,
+      "name": "D5",
+      "type": "GPIO",
+      "description": "Digital I/O 5; PWM; UNO-compatible header signal"
+    },
+    {
+      "number": 6,
+      "name": "D6",
+      "type": "GPIO",
+      "description": "Digital I/O 6; PWM; UNO-compatible header signal"
+    },
+    {
+      "number": 7,
+      "name": "D7",
+      "type": "GPIO",
+      "description": "Digital I/O 7; UNO-compatible header signal"
+    },
+    {
+      "number": 8,
+      "name": "D8",
+      "type": "GPIO",
+      "description": "Digital I/O 8; UNO-compatible header signal"
+    },
+    {
+      "number": 9,
+      "name": "D9",
+      "type": "GPIO",
+      "description": "Digital I/O 9; PWM; UNO-compatible header signal"
+    },
+    {
+      "number": 10,
+      "name": "D10 / SS",
+      "type": "SPI",
+      "description": "Digital 10; SPI SS; UNO-compatible header signal"
+    },
+    {
+      "number": 11,
+      "name": "D11 / MOSI",
+      "type": "SPI",
+      "description": "Digital 11; SPI MOSI; UNO-compatible header signal"
+    },
+    {
+      "number": 12,
+      "name": "D12 / MISO",
+      "type": "SPI",
+      "description": "Digital 12; SPI MISO; UNO-compatible header signal"
+    },
+    {
+      "number": 13,
+      "name": "D13 / SCK",
+      "type": "SPI",
+      "description": "Digital 13; SPI SCK; UNO-compatible header signal"
+    },
+    {
+      "number": 14,
+      "name": "A0",
+      "type": "ADC",
+      "description": "Analog input 0; digital 14; UNO-compatible header signal"
+    },
+    {
+      "number": 15,
+      "name": "A1",
+      "type": "ADC",
+      "description": "Analog input 1; digital 15; UNO-compatible header signal"
+    },
+    {
+      "number": 16,
+      "name": "A2",
+      "type": "ADC",
+      "description": "Analog input 2; digital 16; UNO-compatible header signal"
+    },
+    {
+      "number": 17,
+      "name": "A3",
+      "type": "ADC",
+      "description": "Analog input 3; digital 17; UNO-compatible header signal"
+    },
+    {
+      "number": 18,
+      "name": "A4 / SDA",
+      "type": "ADC",
+      "description": "Analog input 4; I2C SDA; UNO-compatible header signal"
+    },
+    {
+      "number": 19,
+      "name": "A5 / SCL",
+      "type": "ADC",
+      "description": "Analog input 5; I2C SCL; UNO-compatible header signal"
+    },
+    {
+      "number": 20,
+      "name": "IOREF",
+      "type": "POWER",
+      "description": "Logic voltage reference for shields; UNO-compatible header signal"
+    },
+    {
+      "number": 21,
+      "name": "RESET",
+      "type": "POWER",
+      "description": "Active-low reset input; UNO-compatible header signal"
+    },
+    {
+      "number": 22,
+      "name": "3V3",
+      "type": "POWER",
+      "description": "3.3 V output; UNO-compatible header signal"
+    },
+    {
+      "number": 23,
+      "name": "5V",
+      "type": "POWER",
+      "description": "5 V output; UNO-compatible header signal"
+    },
+    {
+      "number": 24,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground; UNO-compatible header signal"
+    },
+    {
+      "number": 25,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground; UNO-compatible header signal"
+    },
+    {
+      "number": 26,
+      "name": "VIN",
+      "type": "POWER",
+      "description": "External supply input; UNO-compatible header signal"
+    },
+    {
+      "number": 27,
+      "name": "AREF",
+      "type": "POWER",
+      "description": "Analog reference input; UNO-compatible header signal"
+    },
+    {
+      "number": 28,
+      "name": "SDA",
+      "type": "GPIO",
+      "description": "I2C data; duplicates A4; UNO-compatible header signal"
+    },
+    {
+      "number": 29,
+      "name": "SCL",
+      "type": "GPIO",
+      "description": "I2C clock; duplicates A5; UNO-compatible header signal"
+    },
+    {
+      "number": 30,
+      "name": "SCK / ICSP",
+      "type": "SPI",
+      "description": "SPI clock on the ICSP header; duplicates D13; UNO-compatible header signal"
+    },
+    {
+      "number": 31,
+      "name": "MISO / ICSP",
+      "type": "SPI",
+      "description": "SPI MISO on the ICSP header; duplicates D12; UNO-compatible header signal"
+    },
+    {
+      "number": 32,
+      "name": "MOSI / ICSP",
+      "type": "SPI",
+      "description": "SPI MOSI on the ICSP header; duplicates D11; UNO-compatible header signal"
+    },
+    {
+      "number": 33,
+      "name": "GND / ICSP",
+      "type": "GND",
+      "description": "Ground on the ICSP header; UNO-compatible header signal"
+    },
+    {
+      "number": 34,
+      "name": "5V / ICSP",
+      "type": "POWER",
+      "description": "5 V on the ICSP header; UNO-compatible header signal"
+    },
+    {
+      "number": 35,
+      "name": "RESET / ICSP",
+      "type": "POWER",
+      "description": "Active-low reset input; UNO-compatible header signal"
+    }
+  ]
+}

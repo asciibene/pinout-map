@@ -1,0 +1,225 @@
+{
+  "id": "arduino-uno-wifi-rev2",
+  "name": "Arduino UNO WiFi Rev2",
+  "category": "Wi-Fi / Bluetooth LE microcontroller boards",
+  "microcontroller": "ATmega4809 with NINA-W102 Wi-Fi / Bluetooth module",
+  "image": "",
+  "pins": [
+    {
+      "number": 0,
+      "name": "D0 / RX",
+      "type": "UART",
+      "description": "Digital 0; USART0 receive"
+    },
+    {
+      "number": 1,
+      "name": "D1 / TX",
+      "type": "UART",
+      "description": "Digital 1; USART0 transmit"
+    },
+    {
+      "number": 2,
+      "name": "D2",
+      "type": "GPIO",
+      "description": "Digital I/O 2"
+    },
+    {
+      "number": 3,
+      "name": "D3",
+      "type": "GPIO",
+      "description": "Digital I/O 3; PWM"
+    },
+    {
+      "number": 4,
+      "name": "D4",
+      "type": "GPIO",
+      "description": "Digital I/O 4"
+    },
+    {
+      "number": 5,
+      "name": "D5",
+      "type": "GPIO",
+      "description": "Digital I/O 5; PWM"
+    },
+    {
+      "number": 6,
+      "name": "D6",
+      "type": "GPIO",
+      "description": "Digital I/O 6; PWM"
+    },
+    {
+      "number": 7,
+      "name": "D7",
+      "type": "GPIO",
+      "description": "Digital I/O 7"
+    },
+    {
+      "number": 8,
+      "name": "D8",
+      "type": "GPIO",
+      "description": "Digital I/O 8"
+    },
+    {
+      "number": 9,
+      "name": "D9",
+      "type": "GPIO",
+      "description": "Digital I/O 9; PWM"
+    },
+    {
+      "number": 10,
+      "name": "D10 / SS",
+      "type": "SPI",
+      "description": "Digital 10; SPI SS"
+    },
+    {
+      "number": 11,
+      "name": "D11 / MOSI",
+      "type": "SPI",
+      "description": "Digital 11; SPI MOSI"
+    },
+    {
+      "number": 12,
+      "name": "D12 / MISO",
+      "type": "SPI",
+      "description": "Digital 12; SPI MISO"
+    },
+    {
+      "number": 13,
+      "name": "D13 / SCK",
+      "type": "SPI",
+      "description": "Digital 13; SPI SCK"
+    },
+    {
+      "number": 14,
+      "name": "A0",
+      "type": "ADC",
+      "description": "Analog input 0; digital 14"
+    },
+    {
+      "number": 15,
+      "name": "A1",
+      "type": "ADC",
+      "description": "Analog input 1; digital 15"
+    },
+    {
+      "number": 16,
+      "name": "A2",
+      "type": "ADC",
+      "description": "Analog input 2; digital 16"
+    },
+    {
+      "number": 17,
+      "name": "A3",
+      "type": "ADC",
+      "description": "Analog input 3; digital 17"
+    },
+    {
+      "number": 18,
+      "name": "A4 / SDA",
+      "type": "ADC",
+      "description": "Analog input 4; I2C SDA"
+    },
+    {
+      "number": 19,
+      "name": "A5 / SCL",
+      "type": "ADC",
+      "description": "Analog input 5; I2C SCL"
+    },
+    {
+      "number": 20,
+      "name": "IOREF",
+      "type": "POWER",
+      "description": "Logic voltage reference for shields"
+    },
+    {
+      "number": 21,
+      "name": "RESET",
+      "type": "CTRL",
+      "description": "Active-low reset input; resets the ATmega4809"
+    },
+    {
+      "number": 22,
+      "name": "3V3",
+      "type": "POWER",
+      "description": "3.3 V output"
+    },
+    {
+      "number": 23,
+      "name": "5V",
+      "type": "POWER",
+      "description": "5 V output"
+    },
+    {
+      "number": 24,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 25,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 26,
+      "name": "VIN",
+      "type": "POWER",
+      "description": "External supply input"
+    },
+    {
+      "number": 27,
+      "name": "AREF",
+      "type": "ADC",
+      "description": "Analog-to-digital converter reference input"
+    },
+    {
+      "number": 28,
+      "name": "SDA",
+      "type": "GPIO",
+      "description": "I2C data; duplicates A4"
+    },
+    {
+      "number": 29,
+      "name": "SCL",
+      "type": "GPIO",
+      "description": "I2C clock; duplicates A5"
+    },
+    {
+      "number": 30,
+      "name": "SCK / ICSP",
+      "type": "SPI",
+      "description": "SPI clock on the ICSP header; duplicates D13"
+    },
+    {
+      "number": 31,
+      "name": "MISO / ICSP",
+      "type": "SPI",
+      "description": "SPI MISO on the ICSP header; duplicates D12"
+    },
+    {
+      "number": 32,
+      "name": "MOSI / ICSP",
+      "type": "SPI",
+      "description": "SPI MOSI on the ICSP header; duplicates D11"
+    },
+    {
+      "number": 33,
+      "name": "GND / ICSP",
+      "type": "GND",
+      "description": "Ground on the ICSP header"
+    },
+    {
+      "number": 34,
+      "name": "5V / ICSP",
+      "type": "POWER",
+      "description": "5 V on the ICSP header"
+    },
+    {
+      "number": 35,
+      "name": "RESET / ICSP",
+      "type": "CTRL",
+      "description": "Active-low reset on the ICSP header; resets the ATmega4809"
+    }
+  ]
+}

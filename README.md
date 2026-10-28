@@ -28,9 +28,10 @@ Each file must have this structure:
 
 `number` is a board-specific pin index; on Raspberry Pi and Pico boards it is
 the physical header position. `name` retains the board's printed pin label.
-`type` is one of
-`POWER`, `GND`, `ADC`, `UART`, `SPI`, or `GPIO`; `description` can include
-additional multiplexed functions. Set `image` to an empty string when no
+`type` is one of `POWER`, `GND`, `ADC`, `UART`, `SPI`, `GPIO`, or `CTRL`.
+Use `CTRL` for reset, enable, and boot-configuration pins; descriptions should
+include active levels and relevant restrictions when known. Pin descriptions
+can also include multiplexed functions. Set `image` to an empty string when no
 matching board image is available.
 
 ## Getting Started

@@ -1,0 +1,117 @@
+{
+  "id": "espressif-esp32-c3-devkitm-1",
+  "name": "Espressif ESP32-C3-DevKitM-1",
+  "category": "Wi-Fi / Bluetooth LE microcontroller boards",
+  "microcontroller": "ESP32-C3-MINI-1; single-core 160 MHz RISC-V, Wi-Fi and Bluetooth LE",
+  "image": "",
+  "pins": [
+    {
+      "number": 1,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 2,
+      "name": "3V3",
+      "type": "POWER",
+      "description": "3.3 V supply rail"
+    },
+    {
+      "number": 3,
+      "name": "EN",
+      "type": "CTRL",
+      "description": "Chip enable; active high; pull low to reset the module"
+    },
+    {
+      "number": 4,
+      "name": "IO0",
+      "type": "CTRL",
+      "description": "GPIO0 boot-strapping signal; sampled during reset"
+    },
+    {
+      "number": 5,
+      "name": "IO1",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 6,
+      "name": "IO2",
+      "type": "GPIO",
+      "description": "GPIO2; strapping pin sampled during reset"
+    },
+    {
+      "number": 7,
+      "name": "IO3",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 8,
+      "name": "IO4",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 9,
+      "name": "IO5",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 10,
+      "name": "IO6",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 11,
+      "name": "IO7",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 12,
+      "name": "IO8",
+      "type": "GPIO",
+      "description": "GPIO8; strapping pin sampled during reset"
+    },
+    {
+      "number": 13,
+      "name": "IO9",
+      "type": "GPIO",
+      "description": "GPIO9; boot strapping pin; sampled during reset"
+    },
+    {
+      "number": 14,
+      "name": "IO10",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 15,
+      "name": "IO20",
+      "type": "GPIO",
+      "description": "GPIO20; UART0 RX default mapping"
+    },
+    {
+      "number": 16,
+      "name": "IO21",
+      "type": "GPIO",
+      "description": "GPIO21; UART0 TX default mapping"
+    },
+    {
+      "number": 17,
+      "name": "5V",
+      "type": "POWER",
+      "description": "5 V USB rail"
+    },
+    {
+      "number": 18,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    }
+  ]
+}

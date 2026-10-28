@@ -1,0 +1,93 @@
+{
+  "id": "seeed-xiao-samd21",
+  "name": "Seeed XIAO SAMD21",
+  "category": "Microcontrollers / XIAO form factor",
+  "microcontroller": "ATSAMD21G18A, 48 MHz Arm Cortex-M0+",
+  "image": "",
+  "pins": [
+    {
+      "number": 1,
+      "name": "D0 / A0",
+      "type": "ADC",
+      "description": "SAMD21 PA02; analog input A0"
+    },
+    {
+      "number": 2,
+      "name": "D1 / A1",
+      "type": "ADC",
+      "description": "SAMD21 PA04; analog input A1"
+    },
+    {
+      "number": 3,
+      "name": "D2 / A2",
+      "type": "ADC",
+      "description": "SAMD21 PA10; analog input A2"
+    },
+    {
+      "number": 4,
+      "name": "D3 / A3",
+      "type": "ADC",
+      "description": "SAMD21 PA11; analog input A3"
+    },
+    {
+      "number": 5,
+      "name": "D4 / SDA",
+      "type": "GPIO",
+      "description": "SAMD21 PA08; digital I/O; I2C SDA"
+    },
+    {
+      "number": 6,
+      "name": "D5 / SCL",
+      "type": "GPIO",
+      "description": "SAMD21 PA09; digital I/O; I2C SCL"
+    },
+    {
+      "number": 7,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 8,
+      "name": "5V",
+      "type": "POWER",
+      "description": "USB VBUS / nominal 5 V"
+    },
+    {
+      "number": 9,
+      "name": "3V3",
+      "type": "POWER",
+      "description": "Regulated 3.3 V output"
+    },
+    {
+      "number": 10,
+      "name": "D6 / TX",
+      "type": "UART",
+      "description": "SAMD21 PA20; UART transmit"
+    },
+    {
+      "number": 11,
+      "name": "D7 / RX",
+      "type": "UART",
+      "description": "SAMD21 PA21; UART receive"
+    },
+    {
+      "number": 12,
+      "name": "D8 / SCK",
+      "type": "SPI",
+      "description": "SAMD21 PA07; SPI clock"
+    },
+    {
+      "number": 13,
+      "name": "D9 / MISO",
+      "type": "SPI",
+      "description": "SAMD21 PA05; SPI MISO"
+    },
+    {
+      "number": 14,
+      "name": "D10 / MOSI",
+      "type": "SPI",
+      "description": "SAMD21 PA06; SPI MOSI"
+    }
+  ]
+}

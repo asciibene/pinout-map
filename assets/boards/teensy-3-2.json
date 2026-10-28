@@ -1,0 +1,243 @@
+{
+  "id": "teensy-3-2",
+  "name": "PJRC Teensy 3.2",
+  "category": "Microcontrollers / Teensy",
+  "microcontroller": "MK20DX256, 72 MHz Arm Cortex-M4",
+  "image": "",
+  "pins": [
+    {
+      "number": 0,
+      "name": "0",
+      "type": "UART",
+      "description": "Digital pin 0; Serial1 RX"
+    },
+    {
+      "number": 1,
+      "name": "1",
+      "type": "UART",
+      "description": "Digital pin 1; Serial1 TX"
+    },
+    {
+      "number": 2,
+      "name": "2",
+      "type": "GPIO",
+      "description": "Digital I/O 2"
+    },
+    {
+      "number": 3,
+      "name": "3",
+      "type": "GPIO",
+      "description": "Digital I/O 3"
+    },
+    {
+      "number": 4,
+      "name": "4",
+      "type": "GPIO",
+      "description": "Digital I/O 4"
+    },
+    {
+      "number": 5,
+      "name": "5",
+      "type": "GPIO",
+      "description": "Digital I/O 5"
+    },
+    {
+      "number": 6,
+      "name": "6",
+      "type": "GPIO",
+      "description": "Digital I/O 6"
+    },
+    {
+      "number": 7,
+      "name": "7",
+      "type": "UART",
+      "description": "Digital pin 7; Serial2 RX"
+    },
+    {
+      "number": 8,
+      "name": "8",
+      "type": "UART",
+      "description": "Digital pin 8; Serial2 TX"
+    },
+    {
+      "number": 9,
+      "name": "9",
+      "type": "GPIO",
+      "description": "Digital I/O 9"
+    },
+    {
+      "number": 10,
+      "name": "10",
+      "type": "SPI",
+      "description": "Digital pin 10; SPI chip select"
+    },
+    {
+      "number": 11,
+      "name": "11",
+      "type": "SPI",
+      "description": "Digital pin 11; SPI MOSI"
+    },
+    {
+      "number": 12,
+      "name": "12",
+      "type": "SPI",
+      "description": "Digital pin 12; SPI MISO"
+    },
+    {
+      "number": 13,
+      "name": "13",
+      "type": "SPI",
+      "description": "Digital pin 13; onboard LED; SPI clock alternate function"
+    },
+    {
+      "number": 14,
+      "name": "14",
+      "type": "UART",
+      "description": "Digital pin 14; Serial3 TX"
+    },
+    {
+      "number": 15,
+      "name": "15",
+      "type": "UART",
+      "description": "Digital pin 15; Serial3 RX"
+    },
+    {
+      "number": 16,
+      "name": "16",
+      "type": "ADC",
+      "description": "Digital pin 16; analog input A2; 3.3 V maximum"
+    },
+    {
+      "number": 17,
+      "name": "17",
+      "type": "ADC",
+      "description": "Digital pin 17; analog input A3; 3.3 V maximum"
+    },
+    {
+      "number": 18,
+      "name": "18",
+      "type": "ADC",
+      "description": "Digital pin 18; analog input A4; 3.3 V maximum"
+    },
+    {
+      "number": 19,
+      "name": "19",
+      "type": "ADC",
+      "description": "Digital pin 19; analog input A5; 3.3 V maximum"
+    },
+    {
+      "number": 20,
+      "name": "20",
+      "type": "ADC",
+      "description": "Digital pin 20; analog input A6; 3.3 V maximum"
+    },
+    {
+      "number": 21,
+      "name": "21",
+      "type": "ADC",
+      "description": "Digital pin 21; analog input A7; 3.3 V maximum"
+    },
+    {
+      "number": 22,
+      "name": "22",
+      "type": "ADC",
+      "description": "Digital pin 22; analog input A8; 3.3 V maximum"
+    },
+    {
+      "number": 23,
+      "name": "23",
+      "type": "ADC",
+      "description": "Digital pin 23; analog input A9; 3.3 V maximum"
+    },
+    {
+      "number": 24,
+      "name": "24",
+      "type": "GPIO",
+      "description": "Digital I/O 24"
+    },
+    {
+      "number": 25,
+      "name": "25",
+      "type": "GPIO",
+      "description": "Digital I/O 25"
+    },
+    {
+      "number": 26,
+      "name": "26",
+      "type": "GPIO",
+      "description": "Digital I/O 26"
+    },
+    {
+      "number": 27,
+      "name": "27",
+      "type": "GPIO",
+      "description": "Digital I/O 27"
+    },
+    {
+      "number": 28,
+      "name": "28",
+      "type": "GPIO",
+      "description": "Digital I/O 28"
+    },
+    {
+      "number": 29,
+      "name": "29",
+      "type": "GPIO",
+      "description": "Digital I/O 29"
+    },
+    {
+      "number": 30,
+      "name": "30",
+      "type": "GPIO",
+      "description": "Digital I/O 30"
+    },
+    {
+      "number": 31,
+      "name": "31",
+      "type": "GPIO",
+      "description": "Digital I/O 31"
+    },
+    {
+      "number": 32,
+      "name": "32",
+      "type": "GPIO",
+      "description": "Digital I/O 32"
+    },
+    {
+      "number": 33,
+      "name": "33",
+      "type": "GPIO",
+      "description": "Digital I/O 33"
+    },
+    {
+      "number": 100,
+      "name": "3V3",
+      "type": "POWER",
+      "description": "3.3 V output; I/O is not 5 V tolerant"
+    },
+    {
+      "number": 101,
+      "name": "VIN / VUSB",
+      "type": "POWER",
+      "description": "Board power input; follow the Teensy model power guidance"
+    },
+    {
+      "number": 102,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 103,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 104,
+      "name": "PROGRAM / RESET",
+      "type": "CTRL",
+      "description": "Program-mode and reset control; see board revision pinout"
+    }
+  ]
+}

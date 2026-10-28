@@ -547,6 +547,8 @@ class BoardDetailScreen extends StatelessWidget {
         return Colors.grey;
       case 'ADC':
         return Colors.yellowAccent;
+      case 'CTRL':
+        return Colors.brown;
       case 'UART':
         return Colors.greenAccent;
       case 'SPI' :

@@ -1,0 +1,243 @@
+{
+  "id": "stm32-black-pill-f411ce",
+  "name": "Black Pill STM32F411CE",
+  "category": "32-bit ARM microcontrollers",
+  "microcontroller": "STM32F411CEU6, 100 MHz Arm Cortex-M4F",
+  "image": "",
+  "pins": [
+    {
+      "number": 1,
+      "name": "3V3",
+      "type": "POWER",
+      "description": "3.3 V regulated output"
+    },
+    {
+      "number": 2,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 3,
+      "name": "5V",
+      "type": "POWER",
+      "description": "5 V supply input/output depending on USB and regulator"
+    },
+    {
+      "number": 4,
+      "name": "PB9 / I2C1_SDA",
+      "type": "GPIO",
+      "description": "GPIO PB9; I2C1 SDA"
+    },
+    {
+      "number": 5,
+      "name": "PB8 / I2C1_SCL",
+      "type": "GPIO",
+      "description": "GPIO PB8; I2C1 SCL"
+    },
+    {
+      "number": 6,
+      "name": "PB7 / I2C1_SDA",
+      "type": "GPIO",
+      "description": "GPIO PB7; I2C1 SDA alternate mapping"
+    },
+    {
+      "number": 7,
+      "name": "PB6 / I2C1_SCL",
+      "type": "GPIO",
+      "description": "GPIO PB6; I2C1 SCL alternate mapping"
+    },
+    {
+      "number": 8,
+      "name": "PB5 / SPI1_MOSI",
+      "type": "SPI",
+      "description": "GPIO PB5; SPI1 MOSI"
+    },
+    {
+      "number": 9,
+      "name": "PB4 / SPI1_MISO",
+      "type": "SPI",
+      "description": "GPIO PB4; SPI1 MISO"
+    },
+    {
+      "number": 10,
+      "name": "PB3 / SPI1_SCK",
+      "type": "SPI",
+      "description": "GPIO PB3; SPI1 clock"
+    },
+    {
+      "number": 11,
+      "name": "PA15 / SPI1_NSS",
+      "type": "SPI",
+      "description": "GPIO PA15; SPI1 chip select"
+    },
+    {
+      "number": 12,
+      "name": "PA12 / USB_DP",
+      "type": "GPIO",
+      "description": "GPIO PA12; USB D+"
+    },
+    {
+      "number": 13,
+      "name": "PA11 / USB_DM",
+      "type": "GPIO",
+      "description": "GPIO PA11; USB D-"
+    },
+    {
+      "number": 14,
+      "name": "PA10 / USART1_RX",
+      "type": "UART",
+      "description": "GPIO PA10; USART1 receive"
+    },
+    {
+      "number": 15,
+      "name": "PA9 / USART1_TX",
+      "type": "UART",
+      "description": "GPIO PA9; USART1 transmit"
+    },
+    {
+      "number": 16,
+      "name": "PA8",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; timer alternate functions"
+    },
+    {
+      "number": 17,
+      "name": "PB15 / SPI2_MOSI",
+      "type": "SPI",
+      "description": "GPIO PB15; SPI2 MOSI"
+    },
+    {
+      "number": 18,
+      "name": "PB14 / SPI2_MISO",
+      "type": "SPI",
+      "description": "GPIO PB14; SPI2 MISO"
+    },
+    {
+      "number": 19,
+      "name": "PB13 / SPI2_SCK",
+      "type": "SPI",
+      "description": "GPIO PB13; SPI2 clock"
+    },
+    {
+      "number": 20,
+      "name": "PB12 / SPI2_NSS",
+      "type": "SPI",
+      "description": "GPIO PB12; SPI2 chip select"
+    },
+    {
+      "number": 21,
+      "name": "VBAT",
+      "type": "POWER",
+      "description": "RTC backup supply input"
+    },
+    {
+      "number": 22,
+      "name": "PC13 / LED",
+      "type": "GPIO",
+      "description": "GPIO PC13; onboard LED; limited sink/source current"
+    },
+    {
+      "number": 23,
+      "name": "PC14 / OSC32_IN",
+      "type": "GPIO",
+      "description": "GPIO PC14; low-speed oscillator input"
+    },
+    {
+      "number": 24,
+      "name": "PC15 / OSC32_OUT",
+      "type": "GPIO",
+      "description": "GPIO PC15; low-speed oscillator output"
+    },
+    {
+      "number": 25,
+      "name": "PA0 / ADC1_IN0",
+      "type": "ADC",
+      "description": "GPIO PA0; ADC1 channel 0"
+    },
+    {
+      "number": 26,
+      "name": "PA1 / ADC1_IN1",
+      "type": "ADC",
+      "description": "GPIO PA1; ADC1 channel 1"
+    },
+    {
+      "number": 27,
+      "name": "PA2 / USART2_TX",
+      "type": "UART",
+      "description": "GPIO PA2; USART2 transmit; ADC-capable"
+    },
+    {
+      "number": 28,
+      "name": "PA3 / USART2_RX",
+      "type": "UART",
+      "description": "GPIO PA3; USART2 receive; ADC-capable"
+    },
+    {
+      "number": 29,
+      "name": "PA4 / SPI1_NSS",
+      "type": "SPI",
+      "description": "GPIO PA4; SPI1 chip select; ADC-capable"
+    },
+    {
+      "number": 30,
+      "name": "PA5 / SPI1_SCK",
+      "type": "SPI",
+      "description": "GPIO PA5; SPI1 clock; ADC-capable"
+    },
+    {
+      "number": 31,
+      "name": "PA6 / SPI1_MISO",
+      "type": "SPI",
+      "description": "GPIO PA6; SPI1 MISO; ADC-capable"
+    },
+    {
+      "number": 32,
+      "name": "PA7 / SPI1_MOSI",
+      "type": "SPI",
+      "description": "GPIO PA7; SPI1 MOSI; ADC-capable"
+    },
+    {
+      "number": 33,
+      "name": "PB0 / ADC1_IN8",
+      "type": "ADC",
+      "description": "GPIO PB0; ADC1 channel 8"
+    },
+    {
+      "number": 34,
+      "name": "PB1 / ADC1_IN9",
+      "type": "ADC",
+      "description": "GPIO PB1; ADC1 channel 9"
+    },
+    {
+      "number": 35,
+      "name": "NRST",
+      "type": "CTRL",
+      "description": "Active-low reset input"
+    },
+    {
+      "number": 36,
+      "name": "BOOT0",
+      "type": "CTRL",
+      "description": "Boot configuration; high at reset selects system-memory boot"
+    },
+    {
+      "number": 37,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 38,
+      "name": "5V",
+      "type": "POWER",
+      "description": "5 V supply"
+    },
+    {
+      "number": 39,
+      "name": "3V3",
+      "type": "POWER",
+      "description": "3.3 V regulated output"
+    }
+  ]
+}

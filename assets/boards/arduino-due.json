@@ -1,0 +1,483 @@
+{
+  "id": "arduino-due",
+  "name": "Arduino Due",
+  "category": "32-bit ARM microcontrollers",
+  "microcontroller": "Atmel SAM3X8E, 84 MHz, 32-bit Arm Cortex-M3",
+  "image": "",
+  "pins": [
+    {
+      "number": 0,
+      "name": "D0",
+      "type": "UART",
+      "description": "Digital I/O 0; UART0 receive; 3.3 V logic"
+    },
+    {
+      "number": 1,
+      "name": "D1",
+      "type": "UART",
+      "description": "Digital I/O 1; UART0 transmit; 3.3 V logic"
+    },
+    {
+      "number": 2,
+      "name": "D2",
+      "type": "GPIO",
+      "description": "Digital I/O 2; PWM output; 3.3 V logic"
+    },
+    {
+      "number": 3,
+      "name": "D3",
+      "type": "GPIO",
+      "description": "Digital I/O 3; PWM output; 3.3 V logic"
+    },
+    {
+      "number": 4,
+      "name": "D4",
+      "type": "GPIO",
+      "description": "Digital I/O 4; PWM output; 3.3 V logic"
+    },
+    {
+      "number": 5,
+      "name": "D5",
+      "type": "GPIO",
+      "description": "Digital I/O 5; PWM output; 3.3 V logic"
+    },
+    {
+      "number": 6,
+      "name": "D6",
+      "type": "GPIO",
+      "description": "Digital I/O 6; PWM output; 3.3 V logic"
+    },
+    {
+      "number": 7,
+      "name": "D7",
+      "type": "GPIO",
+      "description": "Digital I/O 7; PWM output; 3.3 V logic"
+    },
+    {
+      "number": 8,
+      "name": "D8",
+      "type": "GPIO",
+      "description": "Digital I/O 8; PWM output; 3.3 V logic"
+    },
+    {
+      "number": 9,
+      "name": "D9",
+      "type": "GPIO",
+      "description": "Digital I/O 9; PWM output; 3.3 V logic"
+    },
+    {
+      "number": 10,
+      "name": "D10",
+      "type": "GPIO",
+      "description": "Digital I/O 10; PWM output; 3.3 V logic"
+    },
+    {
+      "number": 11,
+      "name": "D11",
+      "type": "GPIO",
+      "description": "Digital I/O 11; PWM output; 3.3 V logic"
+    },
+    {
+      "number": 12,
+      "name": "D12",
+      "type": "GPIO",
+      "description": "Digital I/O 12; PWM output; 3.3 V logic"
+    },
+    {
+      "number": 13,
+      "name": "D13",
+      "type": "GPIO",
+      "description": "Digital I/O 13; PWM output; 3.3 V logic"
+    },
+    {
+      "number": 14,
+      "name": "D14",
+      "type": "UART",
+      "description": "Digital I/O 14; UART3 transmit; 3.3 V logic"
+    },
+    {
+      "number": 15,
+      "name": "D15",
+      "type": "UART",
+      "description": "Digital I/O 15; UART3 receive; 3.3 V logic"
+    },
+    {
+      "number": 16,
+      "name": "D16",
+      "type": "UART",
+      "description": "Digital I/O 16; UART2 transmit; 3.3 V logic"
+    },
+    {
+      "number": 17,
+      "name": "D17",
+      "type": "UART",
+      "description": "Digital I/O 17; UART2 receive; 3.3 V logic"
+    },
+    {
+      "number": 18,
+      "name": "D18",
+      "type": "UART",
+      "description": "Digital I/O 18; UART1 transmit; 3.3 V logic"
+    },
+    {
+      "number": 19,
+      "name": "D19",
+      "type": "UART",
+      "description": "Digital I/O 19; UART1 receive; 3.3 V logic"
+    },
+    {
+      "number": 20,
+      "name": "D20",
+      "type": "GPIO",
+      "description": "Digital I/O 20; 3.3 V logic"
+    },
+    {
+      "number": 21,
+      "name": "D21",
+      "type": "GPIO",
+      "description": "Digital I/O 21; 3.3 V logic"
+    },
+    {
+      "number": 22,
+      "name": "D22",
+      "type": "GPIO",
+      "description": "Digital I/O 22; 3.3 V logic"
+    },
+    {
+      "number": 23,
+      "name": "D23",
+      "type": "GPIO",
+      "description": "Digital I/O 23; 3.3 V logic"
+    },
+    {
+      "number": 24,
+      "name": "D24",
+      "type": "GPIO",
+      "description": "Digital I/O 24; 3.3 V logic"
+    },
+    {
+      "number": 25,
+      "name": "D25",
+      "type": "GPIO",
+      "description": "Digital I/O 25; 3.3 V logic"
+    },
+    {
+      "number": 26,
+      "name": "D26",
+      "type": "GPIO",
+      "description": "Digital I/O 26; 3.3 V logic"
+    },
+    {
+      "number": 27,
+      "name": "D27",
+      "type": "GPIO",
+      "description": "Digital I/O 27; 3.3 V logic"
+    },
+    {
+      "number": 28,
+      "name": "D28",
+      "type": "GPIO",
+      "description": "Digital I/O 28; 3.3 V logic"
+    },
+    {
+      "number": 29,
+      "name": "D29",
+      "type": "GPIO",
+      "description": "Digital I/O 29; 3.3 V logic"
+    },
+    {
+      "number": 30,
+      "name": "D30",
+      "type": "GPIO",
+      "description": "Digital I/O 30; 3.3 V logic"
+    },
+    {
+      "number": 31,
+      "name": "D31",
+      "type": "GPIO",
+      "description": "Digital I/O 31; 3.3 V logic"
+    },
+    {
+      "number": 32,
+      "name": "D32",
+      "type": "GPIO",
+      "description": "Digital I/O 32; 3.3 V logic"
+    },
+    {
+      "number": 33,
+      "name": "D33",
+      "type": "GPIO",
+      "description": "Digital I/O 33; 3.3 V logic"
+    },
+    {
+      "number": 34,
+      "name": "D34",
+      "type": "GPIO",
+      "description": "Digital I/O 34; 3.3 V logic"
+    },
+    {
+      "number": 35,
+      "name": "D35",
+      "type": "GPIO",
+      "description": "Digital I/O 35; 3.3 V logic"
+    },
+    {
+      "number": 36,
+      "name": "D36",
+      "type": "GPIO",
+      "description": "Digital I/O 36; 3.3 V logic"
+    },
+    {
+      "number": 37,
+      "name": "D37",
+      "type": "GPIO",
+      "description": "Digital I/O 37; 3.3 V logic"
+    },
+    {
+      "number": 38,
+      "name": "D38",
+      "type": "GPIO",
+      "description": "Digital I/O 38; 3.3 V logic"
+    },
+    {
+      "number": 39,
+      "name": "D39",
+      "type": "GPIO",
+      "description": "Digital I/O 39; 3.3 V logic"
+    },
+    {
+      "number": 40,
+      "name": "D40",
+      "type": "GPIO",
+      "description": "Digital I/O 40; 3.3 V logic"
+    },
+    {
+      "number": 41,
+      "name": "D41",
+      "type": "GPIO",
+      "description": "Digital I/O 41; 3.3 V logic"
+    },
+    {
+      "number": 42,
+      "name": "D42",
+      "type": "GPIO",
+      "description": "Digital I/O 42; 3.3 V logic"
+    },
+    {
+      "number": 43,
+      "name": "D43",
+      "type": "GPIO",
+      "description": "Digital I/O 43; 3.3 V logic"
+    },
+    {
+      "number": 44,
+      "name": "D44",
+      "type": "GPIO",
+      "description": "Digital I/O 44; 3.3 V logic"
+    },
+    {
+      "number": 45,
+      "name": "D45",
+      "type": "GPIO",
+      "description": "Digital I/O 45; 3.3 V logic"
+    },
+    {
+      "number": 46,
+      "name": "D46",
+      "type": "GPIO",
+      "description": "Digital I/O 46; 3.3 V logic"
+    },
+    {
+      "number": 47,
+      "name": "D47",
+      "type": "GPIO",
+      "description": "Digital I/O 47; 3.3 V logic"
+    },
+    {
+      "number": 48,
+      "name": "D48",
+      "type": "GPIO",
+      "description": "Digital I/O 48; 3.3 V logic"
+    },
+    {
+      "number": 49,
+      "name": "D49",
+      "type": "GPIO",
+      "description": "Digital I/O 49; 3.3 V logic"
+    },
+    {
+      "number": 50,
+      "name": "D50",
+      "type": "GPIO",
+      "description": "Digital I/O 50; 3.3 V logic"
+    },
+    {
+      "number": 51,
+      "name": "D51",
+      "type": "GPIO",
+      "description": "Digital I/O 51; 3.3 V logic"
+    },
+    {
+      "number": 52,
+      "name": "D52",
+      "type": "GPIO",
+      "description": "Digital I/O 52; 3.3 V logic"
+    },
+    {
+      "number": 53,
+      "name": "D53",
+      "type": "GPIO",
+      "description": "Digital I/O 53; 3.3 V logic"
+    },
+    {
+      "number": 54,
+      "name": "A0",
+      "type": "ADC",
+      "description": "12-bit analog input 0; 3.3 V maximum"
+    },
+    {
+      "number": 55,
+      "name": "A1",
+      "type": "ADC",
+      "description": "12-bit analog input 1; 3.3 V maximum"
+    },
+    {
+      "number": 56,
+      "name": "A2",
+      "type": "ADC",
+      "description": "12-bit analog input 2; 3.3 V maximum"
+    },
+    {
+      "number": 57,
+      "name": "A3",
+      "type": "ADC",
+      "description": "12-bit analog input 3; 3.3 V maximum"
+    },
+    {
+      "number": 58,
+      "name": "A4",
+      "type": "ADC",
+      "description": "12-bit analog input 4; 3.3 V maximum"
+    },
+    {
+      "number": 59,
+      "name": "A5",
+      "type": "ADC",
+      "description": "12-bit analog input 5; 3.3 V maximum"
+    },
+    {
+      "number": 60,
+      "name": "A6",
+      "type": "ADC",
+      "description": "12-bit analog input 6; 3.3 V maximum"
+    },
+    {
+      "number": 61,
+      "name": "A7",
+      "type": "ADC",
+      "description": "12-bit analog input 7; 3.3 V maximum"
+    },
+    {
+      "number": 62,
+      "name": "A8",
+      "type": "ADC",
+      "description": "12-bit analog input 8; 3.3 V maximum"
+    },
+    {
+      "number": 63,
+      "name": "A9",
+      "type": "ADC",
+      "description": "12-bit analog input 9; 3.3 V maximum"
+    },
+    {
+      "number": 64,
+      "name": "A10",
+      "type": "ADC",
+      "description": "12-bit analog input 10; 3.3 V maximum"
+    },
+    {
+      "number": 65,
+      "name": "A11",
+      "type": "ADC",
+      "description": "12-bit analog input 11; 3.3 V maximum"
+    },
+    {
+      "number": 66,
+      "name": "DAC0",
+      "type": "ADC",
+      "description": "12-bit digital-to-analog output; 0-3.3 V"
+    },
+    {
+      "number": 67,
+      "name": "DAC1",
+      "type": "ADC",
+      "description": "12-bit digital-to-analog output; 0-3.3 V"
+    },
+    {
+      "number": 68,
+      "name": "3V3",
+      "type": "POWER",
+      "description": "3.3 V output; board I/O is not 5 V tolerant"
+    },
+    {
+      "number": 69,
+      "name": "5V",
+      "type": "POWER",
+      "description": "5 V rail"
+    },
+    {
+      "number": 70,
+      "name": "VIN",
+      "type": "POWER",
+      "description": "External supply input"
+    },
+    {
+      "number": 71,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 72,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 73,
+      "name": "RESET",
+      "type": "CTRL",
+      "description": "Active-low reset input; resets the SAM3X8E"
+    },
+    {
+      "number": 74,
+      "name": "ERASE",
+      "type": "CTRL",
+      "description": "Active-high erase input; clears the SAM3X flash when held"
+    },
+    {
+      "number": 75,
+      "name": "SPI MISO",
+      "type": "SPI",
+      "description": "SPI MISO on the dedicated SPI header"
+    },
+    {
+      "number": 76,
+      "name": "SPI MOSI",
+      "type": "SPI",
+      "description": "SPI MOSI on the dedicated SPI header"
+    },
+    {
+      "number": 77,
+      "name": "SPI SCK",
+      "type": "SPI",
+      "description": "SPI clock on the dedicated SPI header"
+    },
+    {
+      "number": 78,
+      "name": "AREF",
+      "type": "ADC",
+      "description": "Analog reference input; 3.3 V maximum"
+    }
+  ]
+}

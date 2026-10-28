@@ -1,0 +1,279 @@
+{
+  "id": "arduino-leonardo",
+  "name": "Arduino Leonardo",
+  "category": "Classic AVR / native USB",
+  "microcontroller": "ATmega32U4, 16 MHz, 8-bit AVR with native USB",
+  "image": "",
+  "pins": [
+    {
+      "number": 0,
+      "name": "D0 / RX",
+      "type": "UART",
+      "description": "Digital I/O 0; UART1 receive"
+    },
+    {
+      "number": 1,
+      "name": "D1 / TX",
+      "type": "UART",
+      "description": "Digital I/O 1; UART1 transmit"
+    },
+    {
+      "number": 2,
+      "name": "D2",
+      "type": "GPIO",
+      "description": "Digital I/O 2"
+    },
+    {
+      "number": 3,
+      "name": "D3",
+      "type": "GPIO",
+      "description": "Digital I/O 3; PWM output"
+    },
+    {
+      "number": 4,
+      "name": "D4",
+      "type": "GPIO",
+      "description": "Digital I/O 4"
+    },
+    {
+      "number": 5,
+      "name": "D5",
+      "type": "GPIO",
+      "description": "Digital I/O 5; PWM output"
+    },
+    {
+      "number": 6,
+      "name": "D6",
+      "type": "GPIO",
+      "description": "Digital I/O 6; PWM output"
+    },
+    {
+      "number": 7,
+      "name": "D7",
+      "type": "GPIO",
+      "description": "Digital I/O 7"
+    },
+    {
+      "number": 8,
+      "name": "D8",
+      "type": "GPIO",
+      "description": "Digital I/O 8"
+    },
+    {
+      "number": 9,
+      "name": "D9",
+      "type": "GPIO",
+      "description": "Digital I/O 9; PWM output"
+    },
+    {
+      "number": 10,
+      "name": "D10",
+      "type": "GPIO",
+      "description": "Digital I/O 10; PWM output"
+    },
+    {
+      "number": 11,
+      "name": "D11",
+      "type": "GPIO",
+      "description": "Digital I/O 11; PWM output"
+    },
+    {
+      "number": 12,
+      "name": "D12",
+      "type": "GPIO",
+      "description": "Digital I/O 12"
+    },
+    {
+      "number": 13,
+      "name": "D13",
+      "type": "GPIO",
+      "description": "Digital I/O 13; PWM output"
+    },
+    {
+      "number": 14,
+      "name": "D14 / MISO",
+      "type": "SPI",
+      "description": "Digital I/O 14; SPI MISO"
+    },
+    {
+      "number": 15,
+      "name": "D15 / SCK",
+      "type": "SPI",
+      "description": "Digital I/O 15; SPI clock"
+    },
+    {
+      "number": 16,
+      "name": "D16 / MOSI",
+      "type": "SPI",
+      "description": "Digital I/O 16; SPI MOSI"
+    },
+    {
+      "number": 17,
+      "name": "D17",
+      "type": "GPIO",
+      "description": "Digital I/O 17; Digital I/O; onboard LED on Leonardo"
+    },
+    {
+      "number": 18,
+      "name": "D18",
+      "type": "GPIO",
+      "description": "Digital I/O 18"
+    },
+    {
+      "number": 19,
+      "name": "D19",
+      "type": "GPIO",
+      "description": "Digital I/O 19"
+    },
+    {
+      "number": 20,
+      "name": "A0",
+      "type": "ADC",
+      "description": "Analog input 0; also digital pin 18"
+    },
+    {
+      "number": 21,
+      "name": "A1",
+      "type": "ADC",
+      "description": "Analog input 1; also digital pin 19"
+    },
+    {
+      "number": 22,
+      "name": "A2",
+      "type": "ADC",
+      "description": "Analog input 2; also digital pin 20"
+    },
+    {
+      "number": 23,
+      "name": "A3",
+      "type": "ADC",
+      "description": "Analog input 3; also digital pin 21"
+    },
+    {
+      "number": 24,
+      "name": "A4",
+      "type": "ADC",
+      "description": "Analog input 4; also digital pin 22"
+    },
+    {
+      "number": 25,
+      "name": "A5",
+      "type": "ADC",
+      "description": "Analog input 5; also digital pin 23"
+    },
+    {
+      "number": 26,
+      "name": "A6",
+      "type": "ADC",
+      "description": "Analog input 6; also digital pin 4"
+    },
+    {
+      "number": 27,
+      "name": "A7",
+      "type": "ADC",
+      "description": "Analog input 7; also digital pin 6"
+    },
+    {
+      "number": 28,
+      "name": "A8",
+      "type": "ADC",
+      "description": "Analog input 8; also digital pin 8"
+    },
+    {
+      "number": 29,
+      "name": "A9",
+      "type": "ADC",
+      "description": "Analog input 9; also digital pin 9"
+    },
+    {
+      "number": 30,
+      "name": "A10",
+      "type": "ADC",
+      "description": "Analog input 10; also digital pin 10"
+    },
+    {
+      "number": 31,
+      "name": "A11",
+      "type": "ADC",
+      "description": "Analog input 11; also digital pin 12"
+    },
+    {
+      "number": 32,
+      "name": "SDA",
+      "type": "GPIO",
+      "description": "I2C data; shares A4 / digital pin 2"
+    },
+    {
+      "number": 33,
+      "name": "SCL",
+      "type": "GPIO",
+      "description": "I2C clock; shares A5 / digital pin 3"
+    },
+    {
+      "number": 34,
+      "name": "ICSP MISO",
+      "type": "SPI",
+      "description": "SPI MISO on the 2x3 ICSP header"
+    },
+    {
+      "number": 35,
+      "name": "ICSP SCK",
+      "type": "SPI",
+      "description": "SPI clock on the 2x3 ICSP header"
+    },
+    {
+      "number": 36,
+      "name": "ICSP MOSI",
+      "type": "SPI",
+      "description": "SPI MOSI on the 2x3 ICSP header"
+    },
+    {
+      "number": 37,
+      "name": "ICSP RESET",
+      "type": "CTRL",
+      "description": "Active-low reset on the ICSP header"
+    },
+    {
+      "number": 38,
+      "name": "ICSP 5V",
+      "type": "POWER",
+      "description": "5 V supply on the ICSP header"
+    },
+    {
+      "number": 39,
+      "name": "ICSP GND",
+      "type": "GND",
+      "description": "Ground on the ICSP header"
+    },
+    {
+      "number": 40,
+      "name": "RESET",
+      "type": "CTRL",
+      "description": "Active-low reset input; resets the ATmega32U4"
+    },
+    {
+      "number": 41,
+      "name": "3V3",
+      "type": "POWER",
+      "description": "3.3 V output"
+    },
+    {
+      "number": 42,
+      "name": "5V",
+      "type": "POWER",
+      "description": "Regulated 5 V rail"
+    },
+    {
+      "number": 43,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 44,
+      "name": "VIN",
+      "type": "POWER",
+      "description": "External supply input; voltage range depends on board power circuit"
+    }
+  ]
+}

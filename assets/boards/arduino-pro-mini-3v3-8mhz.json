@@ -1,0 +1,177 @@
+{
+  "id": "arduino-pro-mini-3v3-8mhz",
+  "name": "Arduino Pro Mini (3.3V 8MHz)",
+  "category": "Classic AVR",
+  "microcontroller": "ATmega328P, 8 MHz, 8-bit AVR",
+  "image": "",
+  "pins": [
+    {
+      "number": 1,
+      "name": "D1 / TX",
+      "type": "UART",
+      "description": "UART0 transmit"
+    },
+    {
+      "number": 2,
+      "name": "D0 / RX",
+      "type": "UART",
+      "description": "UART0 receive"
+    },
+    {
+      "number": 3,
+      "name": "RESET",
+      "type": "CTRL",
+      "description": "Active-low reset input"
+    },
+    {
+      "number": 4,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 5,
+      "name": "D2",
+      "type": "GPIO",
+      "description": "Digital I/O 2; external interrupt"
+    },
+    {
+      "number": 6,
+      "name": "D3",
+      "type": "GPIO",
+      "description": "Digital I/O 3; PWM"
+    },
+    {
+      "number": 7,
+      "name": "D4",
+      "type": "GPIO",
+      "description": "Digital I/O 4"
+    },
+    {
+      "number": 8,
+      "name": "D5",
+      "type": "GPIO",
+      "description": "Digital I/O 5; PWM"
+    },
+    {
+      "number": 9,
+      "name": "D6",
+      "type": "GPIO",
+      "description": "Digital I/O 6; PWM"
+    },
+    {
+      "number": 10,
+      "name": "D7",
+      "type": "GPIO",
+      "description": "Digital I/O 7"
+    },
+    {
+      "number": 11,
+      "name": "D8",
+      "type": "GPIO",
+      "description": "Digital I/O 8"
+    },
+    {
+      "number": 12,
+      "name": "D9",
+      "type": "GPIO",
+      "description": "Digital I/O 9; PWM"
+    },
+    {
+      "number": 13,
+      "name": "D10 / SS",
+      "type": "SPI",
+      "description": "SPI slave select"
+    },
+    {
+      "number": 14,
+      "name": "D11 / MOSI",
+      "type": "SPI",
+      "description": "SPI MOSI; PWM"
+    },
+    {
+      "number": 15,
+      "name": "D12 / MISO",
+      "type": "SPI",
+      "description": "SPI MISO"
+    },
+    {
+      "number": 16,
+      "name": "D13 / SCK",
+      "type": "SPI",
+      "description": "SPI clock; onboard LED"
+    },
+    {
+      "number": 17,
+      "name": "A0",
+      "type": "ADC",
+      "description": "Analog input 0; also digital 14"
+    },
+    {
+      "number": 18,
+      "name": "A1",
+      "type": "ADC",
+      "description": "Analog input 1; also digital 15"
+    },
+    {
+      "number": 19,
+      "name": "A2",
+      "type": "ADC",
+      "description": "Analog input 2; also digital 16"
+    },
+    {
+      "number": 20,
+      "name": "A3",
+      "type": "ADC",
+      "description": "Analog input 3; also digital 17"
+    },
+    {
+      "number": 21,
+      "name": "A4 / SDA",
+      "type": "ADC",
+      "description": "Analog input 4; I2C SDA; also digital 18"
+    },
+    {
+      "number": 22,
+      "name": "A5 / SCL",
+      "type": "ADC",
+      "description": "Analog input 5; I2C SCL; also digital 19"
+    },
+    {
+      "number": 23,
+      "name": "A6",
+      "type": "ADC",
+      "description": "Analog input 6; analog-only"
+    },
+    {
+      "number": 24,
+      "name": "A7",
+      "type": "ADC",
+      "description": "Analog input 7; analog-only"
+    },
+    {
+      "number": 25,
+      "name": "VCC",
+      "type": "POWER",
+      "description": "Regulated 3.3 V logic supply; board variant"
+    },
+    {
+      "number": 26,
+      "name": "RAW",
+      "type": "POWER",
+      "description": "Unregulated input to onboard voltage regulator"
+    },
+    {
+      "number": 27,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 28,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "id": "heltec-wifi-lora-32-v3",
+  "name": "Heltec WiFi LoRa 32 V3",
+  "category": "Wi-Fi / LoRa microcontroller boards",
+  "microcontroller": "ESP32-S3FN8; dual-core Xtensa LX7; SX1262 LoRa transceiver",
+  "image": "",
+  "pins": [
+    {
+      "number": 1,
+      "name": "3V3",
+      "type": "POWER",
+      "description": "3.3 V supply rail"
+    },
+    {
+      "number": 2,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 3,
+      "name": "GPIO0",
+      "type": "GPIO",
+      "description": "GPIO0; boot strapping pin"
+    },
+    {
+      "number": 4,
+      "name": "GPIO1",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 5,
+      "name": "GPIO2",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 6,
+      "name": "GPIO3",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 7,
+      "name": "GPIO4",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 8,
+      "name": "GPIO5",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 9,
+      "name": "GPIO6",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 10,
+      "name": "GPIO7",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 11,
+      "name": "GPIO8",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 12,
+      "name": "GPIO9",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 13,
+      "name": "GPIO10",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 14,
+      "name": "GPIO11",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 15,
+      "name": "GPIO12",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 16,
+      "name": "GPIO13",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 17,
+      "name": "GPIO14",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 18,
+      "name": "GPIO15",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 19,
+      "name": "GPIO16",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 20,
+      "name": "GPIO17",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 21,
+      "name": "GPIO18",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 22,
+      "name": "GPIO19",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 23,
+      "name": "GPIO20",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 24,
+      "name": "GPIO21",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 25,
+      "name": "GPIO33",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 26,
+      "name": "GPIO34",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 27,
+      "name": "GPIO35",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 28,
+      "name": "GPIO36",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 29,
+      "name": "GPIO37",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 30,
+      "name": "GPIO38",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 31,
+      "name": "GPIO39",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 32,
+      "name": "GPIO40",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 33,
+      "name": "GPIO41",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 34,
+      "name": "GPIO42",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 35,
+      "name": "GPIO45",
+      "type": "GPIO",
+      "description": "GPIO45; strapping pin"
+    },
+    {
+      "number": 36,
+      "name": "GPIO46",
+      "type": "GPIO",
+      "description": "GPIO46; strapping pin and input-only"
+    },
+    {
+      "number": 37,
+      "name": "GPIO47",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 38,
+      "name": "GPIO48",
+      "type": "GPIO",
+      "description": "General-purpose digital I/O; peripheral functions are multiplexed"
+    },
+    {
+      "number": 39,
+      "name": "5V",
+      "type": "POWER",
+      "description": "5 V USB rail"
+    },
+    {
+      "number": 40,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 41,
+      "name": "RST",
+      "type": "CTRL",
+      "description": "Active-low reset input"
+    },
+    {
+      "number": 42,
+      "name": "BOOT",
+      "type": "CTRL",
+      "description": "Boot-mode control; sampled during reset"
+    }
+  ]
+}

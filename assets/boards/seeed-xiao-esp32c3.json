@@ -1,0 +1,93 @@
+{
+  "id": "seeed-xiao-esp32c3",
+  "name": "Seeed XIAO ESP32C3",
+  "category": "Microcontrollers / XIAO form factor",
+  "microcontroller": "ESP32-C3, single-core 160 MHz RISC-V with Wi-Fi/Bluetooth LE",
+  "image": "",
+  "pins": [
+    {
+      "number": 1,
+      "name": "D0 / A0",
+      "type": "ADC",
+      "description": "ESP32-C3 GPIO2; ADC input"
+    },
+    {
+      "number": 2,
+      "name": "D1 / A1",
+      "type": "ADC",
+      "description": "ESP32-C3 GPIO3; ADC input"
+    },
+    {
+      "number": 3,
+      "name": "D2 / A2",
+      "type": "ADC",
+      "description": "ESP32-C3 GPIO4; ADC input"
+    },
+    {
+      "number": 4,
+      "name": "D3 / A3",
+      "type": "ADC",
+      "description": "ESP32-C3 GPIO5; ADC input"
+    },
+    {
+      "number": 5,
+      "name": "D4 / SDA",
+      "type": "GPIO",
+      "description": "ESP32-C3 GPIO6; I2C SDA"
+    },
+    {
+      "number": 6,
+      "name": "D5 / SCL",
+      "type": "GPIO",
+      "description": "ESP32-C3 GPIO7; I2C SCL"
+    },
+    {
+      "number": 7,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 8,
+      "name": "5V",
+      "type": "POWER",
+      "description": "USB VBUS / nominal 5 V"
+    },
+    {
+      "number": 9,
+      "name": "3V3",
+      "type": "POWER",
+      "description": "Regulated 3.3 V output"
+    },
+    {
+      "number": 10,
+      "name": "D6 / TX",
+      "type": "UART",
+      "description": "ESP32-C3 GPIO21; UART transmit"
+    },
+    {
+      "number": 11,
+      "name": "D7 / RX",
+      "type": "UART",
+      "description": "ESP32-C3 GPIO20; UART receive"
+    },
+    {
+      "number": 12,
+      "name": "D8 / SCK",
+      "type": "SPI",
+      "description": "ESP32-C3 GPIO8; SPI clock"
+    },
+    {
+      "number": 13,
+      "name": "D9 / MISO",
+      "type": "SPI",
+      "description": "ESP32-C3 GPIO9; SPI MISO"
+    },
+    {
+      "number": 14,
+      "name": "D10 / MOSI",
+      "type": "SPI",
+      "description": "ESP32-C3 GPIO10; SPI MOSI"
+    }
+  ]
+}

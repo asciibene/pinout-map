@@ -1,0 +1,111 @@
+{
+  "id": "lolin-d1-mini-v4",
+  "name": "LOLIN D1 mini V4.0",
+  "category": "Wi-Fi microcontroller boards",
+  "microcontroller": "ESP8266EX, 80/160 MHz; 4 MB flash",
+  "image": "",
+  "pins": [
+    {
+      "number": 0,
+      "name": "A0",
+      "type": "ADC",
+      "description": "Analog input; 3.2 V maximum on LOLIN D1 mini V4.0"
+    },
+    {
+      "number": 1,
+      "name": "3V3",
+      "type": "POWER",
+      "description": "3.3 V regulated output"
+    },
+    {
+      "number": 2,
+      "name": "D0 / GPIO16",
+      "type": "GPIO",
+      "description": "GPIO 16; deep-sleep wake; no PWM, I2C, or external interrupt on standard ESP8266 core"
+    },
+    {
+      "number": 3,
+      "name": "D1 / GPIO5",
+      "type": "GPIO",
+      "description": "GPIO 5; commonly used as I2C SCL"
+    },
+    {
+      "number": 4,
+      "name": "D2 / GPIO4",
+      "type": "GPIO",
+      "description": "GPIO 4; commonly used as I2C SDA"
+    },
+    {
+      "number": 5,
+      "name": "D3 / GPIO0",
+      "type": "CTRL",
+      "description": "GPIO 0; boot-configuration pin sampled during reset"
+    },
+    {
+      "number": 6,
+      "name": "D4 / GPIO2",
+      "type": "CTRL",
+      "description": "GPIO 2; boot-configuration pin sampled during reset; onboard LED"
+    },
+    {
+      "number": 7,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 8,
+      "name": "5V",
+      "type": "POWER",
+      "description": "USB VBUS / 5 V input"
+    },
+    {
+      "number": 9,
+      "name": "5V",
+      "type": "POWER",
+      "description": "5 V rail"
+    },
+    {
+      "number": 10,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 11,
+      "name": "D8 / GPIO15",
+      "type": "CTRL",
+      "description": "GPIO 15; boot-configuration pin sampled during reset"
+    },
+    {
+      "number": 12,
+      "name": "D7 / GPIO13",
+      "type": "SPI",
+      "description": "GPIO 13; HSPI MOSI"
+    },
+    {
+      "number": 13,
+      "name": "D6 / GPIO12",
+      "type": "SPI",
+      "description": "GPIO 12; HSPI MISO"
+    },
+    {
+      "number": 14,
+      "name": "D5 / GPIO14",
+      "type": "SPI",
+      "description": "GPIO 14; HSPI clock"
+    },
+    {
+      "number": 15,
+      "name": "RX / GPIO3",
+      "type": "UART",
+      "description": "UART0 receive"
+    },
+    {
+      "number": 16,
+      "name": "TX / GPIO1",
+      "type": "UART",
+      "description": "UART0 transmit"
+    }
+  ]
+}

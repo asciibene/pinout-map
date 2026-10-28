@@ -1,0 +1,189 @@
+{
+  "id": "arduino-mkr-wifi-1010",
+  "name": "Arduino MKR WiFi 1010",
+  "category": "Microcontrollers / MKR form factor",
+  "microcontroller": "SAMD21 Cortex-M0+; u-blox NINA-W102 Wi-Fi/Bluetooth LE",
+  "image": "",
+  "pins": [
+    {
+      "number": 1,
+      "name": "D0 / RX",
+      "type": "UART",
+      "description": "SERCOM UART receive"
+    },
+    {
+      "number": 2,
+      "name": "D1 / TX",
+      "type": "UART",
+      "description": "SERCOM UART transmit"
+    },
+    {
+      "number": 3,
+      "name": "D2",
+      "type": "GPIO",
+      "description": "Digital I/O"
+    },
+    {
+      "number": 4,
+      "name": "D3",
+      "type": "GPIO",
+      "description": "Digital I/O; PWM capable"
+    },
+    {
+      "number": 5,
+      "name": "D4",
+      "type": "GPIO",
+      "description": "Digital I/O"
+    },
+    {
+      "number": 6,
+      "name": "D5",
+      "type": "GPIO",
+      "description": "Digital I/O; PWM capable"
+    },
+    {
+      "number": 7,
+      "name": "D6",
+      "type": "GPIO",
+      "description": "Digital I/O; PWM capable"
+    },
+    {
+      "number": 8,
+      "name": "D7",
+      "type": "GPIO",
+      "description": "Digital I/O"
+    },
+    {
+      "number": 9,
+      "name": "D8",
+      "type": "GPIO",
+      "description": "Digital I/O"
+    },
+    {
+      "number": 10,
+      "name": "D9",
+      "type": "GPIO",
+      "description": "Digital I/O; PWM capable"
+    },
+    {
+      "number": 11,
+      "name": "D10 / SS",
+      "type": "SPI",
+      "description": "SPI chip select"
+    },
+    {
+      "number": 12,
+      "name": "D11 / MOSI",
+      "type": "SPI",
+      "description": "SPI MOSI"
+    },
+    {
+      "number": 13,
+      "name": "D12 / MISO",
+      "type": "SPI",
+      "description": "SPI MISO"
+    },
+    {
+      "number": 14,
+      "name": "D13 / SCK",
+      "type": "SPI",
+      "description": "SPI clock"
+    },
+    {
+      "number": 15,
+      "name": "D14 / SDA",
+      "type": "GPIO",
+      "description": "I2C data; also digital I/O"
+    },
+    {
+      "number": 16,
+      "name": "D15 / SCL",
+      "type": "GPIO",
+      "description": "I2C clock; also digital I/O"
+    },
+    {
+      "number": 17,
+      "name": "A0 / DAC0",
+      "type": "ADC",
+      "description": "Analog input; DAC output on supported MKR variants"
+    },
+    {
+      "number": 18,
+      "name": "A1",
+      "type": "ADC",
+      "description": "Analog input"
+    },
+    {
+      "number": 19,
+      "name": "A2",
+      "type": "ADC",
+      "description": "Analog input"
+    },
+    {
+      "number": 20,
+      "name": "A3",
+      "type": "ADC",
+      "description": "Analog input"
+    },
+    {
+      "number": 21,
+      "name": "A4",
+      "type": "ADC",
+      "description": "Analog input"
+    },
+    {
+      "number": 22,
+      "name": "A5",
+      "type": "ADC",
+      "description": "Analog input"
+    },
+    {
+      "number": 23,
+      "name": "A6",
+      "type": "ADC",
+      "description": "Analog input"
+    },
+    {
+      "number": 24,
+      "name": "3V3",
+      "type": "POWER",
+      "description": "3.3 V regulated output; I/O logic voltage"
+    },
+    {
+      "number": 25,
+      "name": "5V",
+      "type": "POWER",
+      "description": "USB 5 V rail"
+    },
+    {
+      "number": 26,
+      "name": "VIN",
+      "type": "POWER",
+      "description": "External supply input; range depends on MKR model"
+    },
+    {
+      "number": 27,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 28,
+      "name": "GND",
+      "type": "GND",
+      "description": "Ground"
+    },
+    {
+      "number": 29,
+      "name": "RESET",
+      "type": "CTRL",
+      "description": "Active-low reset input"
+    },
+    {
+      "number": 30,
+      "name": "AREF",
+      "type": "ADC",
+      "description": "Analog reference connection"
+    }
+  ]
+}
