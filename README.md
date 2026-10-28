@@ -1,7 +1,4 @@
 # Pinout app
-
-A new Flutter project created with FlutLab - https://flutlab.io
-
 ## Adding boards
 
 Add one `.json` file per board inside `assets/boards/`. The app loads all JSON
@@ -33,19 +30,3 @@ Use `CTRL` for reset, enable, and boot-configuration pins; descriptions should
 include active levels and relevant restrictions when known. Pin descriptions
 can also include multiplexed functions. Set `image` to an empty string when no
 matching board image is available.
-
-## Getting Started
-
-A few resources to get you started if this is your first Flutter project:
-
-- https://flutter.dev/docs/get-started/codelab
-- https://flutter.dev/docs/cookbook
-
-For help getting started with Flutter, view our
-https://flutter.dev/docs, which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-## Getting Started: FlutLab - Flutter Online IDE
-
-- How to use FlutLab? Please, view our https://flutlab.io/docs
-- Join the discussion and conversation on https://flutlab.io/residents
