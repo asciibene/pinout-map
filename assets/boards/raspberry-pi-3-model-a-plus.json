@@ -3,7 +3,7 @@
   "name": "Raspberry Pi 3 Model A+",
   "category": "Single-board computers / carrier boards",
   "microcontroller": "Broadcom BCM2837B0, quad-core 64-bit Arm Cortex-A53",
-  "image": "",
+  "image": "assets/images/boards/raspberry-pi-4.jpg",
   "pins": [
     {
       "number": 1,

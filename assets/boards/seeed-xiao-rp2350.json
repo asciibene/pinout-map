@@ -3,7 +3,7 @@
   "name": "Seeed XIAO RP2350",
   "category": "Microcontrollers / XIAO form factor",
   "microcontroller": "RP2350, dual-core Arm Cortex-M33 / Hazard3 RISC-V",
-  "image": "",
+  "image": "assets/images/boards/raspberry-pi-pico.jpg",
   "pins": [
     {
       "number": 1,

@@ -3,7 +3,7 @@
   "name": "Arduino Pro Mini (5V 16MHz)",
   "category": "Classic AVR",
   "microcontroller": "ATmega328P, 16 MHz, 8-bit AVR",
-  "image": "",
+  "image": "assets/images/boards/arduino-nano.jpg",
   "pins": [
     {
       "number": 1,

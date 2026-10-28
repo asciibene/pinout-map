@@ -3,7 +3,7 @@
   "name": "Arduino Mega 2560",
   "category": "Classic AVR",
   "microcontroller": "ATmega2560",
-  "image": "",
+  "image": "assets/images/boards/arduino-mega.jpg",
   "pins": [
     {
       "number": 0,

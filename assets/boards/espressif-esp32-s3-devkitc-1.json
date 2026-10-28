@@ -3,7 +3,7 @@
   "name": "Espressif ESP32-S3-DevKitC-1",
   "category": "Wi-Fi / Bluetooth LE microcontroller boards",
   "microcontroller": "ESP32-S3-WROOM-1; dual-core Xtensa LX7, Wi-Fi 2.4 GHz and Bluetooth LE",
-  "image": "",
+  "image": "assets/images/boards/esp32-devkit.jpg",
   "pins": [
     {
       "number": 1,

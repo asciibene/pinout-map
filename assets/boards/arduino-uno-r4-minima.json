@@ -3,7 +3,7 @@
   "name": "Arduino UNO R4 Minima",
   "category": "32-bit ARM microcontrollers",
   "microcontroller": "Renesas RA4M1, 48 MHz, 32-bit Arm Cortex-M4",
-  "image": "",
+  "image": "assets/images/boards/arduino-uno.jpg",
   "pins": [
     {
       "number": 0,

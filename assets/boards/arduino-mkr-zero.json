@@ -3,7 +3,7 @@
   "name": "Arduino MKR Zero",
   "category": "Microcontrollers / MKR form factor",
   "microcontroller": "SAMD21 Cortex-M0+; microSD interface",
-  "image": "",
+  "image": "assets/images/boards/arduino-mkr.jpg",
   "pins": [
     {
       "number": 1,

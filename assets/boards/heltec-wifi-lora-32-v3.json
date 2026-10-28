@@ -3,7 +3,7 @@
   "name": "Heltec WiFi LoRa 32 V3",
   "category": "Wi-Fi / LoRa microcontroller boards",
   "microcontroller": "ESP32-S3FN8; dual-core Xtensa LX7; SX1262 LoRa transceiver",
-  "image": "",
+  "image": "assets/images/boards/esp32-devkit.jpg",
   "pins": [
     {
       "number": 1,

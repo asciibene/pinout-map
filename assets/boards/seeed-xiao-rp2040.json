@@ -3,7 +3,7 @@
   "name": "Seeed XIAO RP2040",
   "category": "Microcontrollers",
   "microcontroller": "RP2040 dual-core ARM Cortex-M0+",
-  "image": "",
+  "image": "assets/images/boards/raspberry-pi-pico.jpg",
   "pins": [
     {
       "number": 1,

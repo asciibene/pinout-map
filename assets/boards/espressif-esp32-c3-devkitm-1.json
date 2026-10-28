@@ -3,7 +3,7 @@
   "name": "Espressif ESP32-C3-DevKitM-1",
   "category": "Wi-Fi / Bluetooth LE microcontroller boards",
   "microcontroller": "ESP32-C3-MINI-1; single-core 160 MHz RISC-V, Wi-Fi and Bluetooth LE",
-  "image": "",
+  "image": "assets/images/boards/esp32-devkit.jpg",
   "pins": [
     {
       "number": 1,

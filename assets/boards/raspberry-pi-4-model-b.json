@@ -3,7 +3,7 @@
   "name": "Raspberry Pi 4 Model B",
   "category": "Single-board computers",
   "microcontroller": "Broadcom BCM2711, quad-core 64-bit SoC",
-  "image": "",
+  "image": "assets/images/boards/raspberry-pi-4.jpg",
   "pins": [
     {
       "number": 1,

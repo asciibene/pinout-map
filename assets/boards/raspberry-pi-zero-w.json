@@ -3,7 +3,7 @@
   "name": "Raspberry Pi Zero W",
   "category": "Single-board computers",
   "microcontroller": "Broadcom BCM2835, single-core Arm1176JZF-S SoC",
-  "image": "",
+  "image": "assets/images/boards/raspberry-pi-zero.jpg",
   "pins": [
     {
       "number": 1,

@@ -3,7 +3,7 @@
   "name": "Raspberry Pi Zero 2 W",
   "category": "Single-board computers",
   "microcontroller": "Broadcom BCM2710A1, quad-core 64-bit SoC",
-  "image": "",
+  "image": "assets/images/boards/raspberry-pi-zero.jpg",
   "pins": [
     {
       "number": 1,

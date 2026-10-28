@@ -3,7 +3,7 @@
   "name": "Seeed XIAO SAMD21",
   "category": "Microcontrollers / XIAO form factor",
   "microcontroller": "ATSAMD21G18A, 48 MHz Arm Cortex-M0+",
-  "image": "",
+  "image": "assets/images/boards/arduino-nano.jpg",
   "pins": [
     {
       "number": 1,

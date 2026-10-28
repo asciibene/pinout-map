@@ -3,7 +3,7 @@
   "name": "Adafruit HUZZAH32 Feather ESP32 V2",
   "category": "Microcontrollers / Feather form factor",
   "microcontroller": "ESP32, dual-core Xtensa LX6; Wi-Fi/Bluetooth",
-  "image": "",
+  "image": "assets/images/boards/esp32-devkit.jpg",
   "pins": [
     {
       "number": 1,

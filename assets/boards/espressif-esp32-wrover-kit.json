@@ -3,7 +3,7 @@
   "name": "Espressif ESP-WROVER-KIT",
   "category": "Wi-Fi / Bluetooth microcontroller boards",
   "microcontroller": "ESP32-WROVER module; dual-core Xtensa LX6 with PSRAM",
-  "image": "",
+  "image": "assets/images/boards/esp32-devkit.jpg",
   "pins": [
     {
       "number": 1,

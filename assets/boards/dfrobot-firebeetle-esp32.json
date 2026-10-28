@@ -3,7 +3,7 @@
   "name": "DFRobot FireBeetle 2 ESP32-E",
   "category": "Wi-Fi / Bluetooth microcontroller boards",
   "microcontroller": "ESP32-WROOM-32E; dual-core Xtensa LX6 with Wi-Fi and Bluetooth",
-  "image": "",
+  "image": "assets/images/boards/esp32-devkit.jpg",
   "pins": [
     {
       "number": 1,

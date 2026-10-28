@@ -3,7 +3,7 @@
   "name": "LILYGO TTGO T-Display (ESP32)",
   "category": "Wi-Fi / Bluetooth microcontroller boards",
   "microcontroller": "ESP32-WROVER-B; dual-core Xtensa LX6 with PSRAM; 1.14-inch TFT",
-  "image": "",
+  "image": "assets/images/boards/esp32-devkit.jpg",
   "pins": [
     {
       "number": 1,

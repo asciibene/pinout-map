@@ -3,7 +3,7 @@
   "name": "LOLIN ESP32-C3 Super Mini",
   "category": "Wi-Fi / Bluetooth LE microcontroller boards",
   "microcontroller": "ESP32-C3; single-core RISC-V with Wi-Fi and Bluetooth LE",
-  "image": "",
+  "image": "assets/images/boards/esp32-devkit.jpg",
   "pins": [
     {
       "number": 1,

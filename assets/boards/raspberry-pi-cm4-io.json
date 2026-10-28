@@ -3,7 +3,7 @@
   "name": "Raspberry Pi Compute Module 4 IO Board",
   "category": "Single-board computers / carrier boards",
   "microcontroller": "Broadcom BCM2711; Compute Module 4 carrier board",
-  "image": "",
+  "image": "assets/images/boards/raspberry-pi-cm-io.jpg",
   "pins": [
     {
       "number": 1,

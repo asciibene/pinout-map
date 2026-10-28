@@ -20,3 +20,81 @@ raspberry-pi-pico.jpg
   Licensed under CC BY-SA 4.0:
   https://creativecommons.org/licenses/by-sa/4.0/
   The bundled image is a 500 px Wikimedia Commons thumbnail.
+
+arduino-uno.jpg
+  "Arduino Uno - R3.jpg" by SparkFun Electronics
+  https://commons.wikimedia.org/wiki/File:Arduino_Uno_-_R3.jpg
+  Licensed under CC BY 2.0:
+  https://creativecommons.org/licenses/by/2.0/
+  The bundled image is a 500 px Wikimedia Commons thumbnail.
+
+arduino-mega.jpg
+  "Arduino MEGA 2560 R3, front side.jpg" by Dsimic
+  https://commons.wikimedia.org/wiki/File:Arduino_MEGA_2560_R3,_front_side.jpg
+  Licensed under CC BY-SA 4.0:
+  https://creativecommons.org/licenses/by-sa/4.0/
+  The bundled image is a 500 px Wikimedia Commons thumbnail.
+
+raspberry-pi-model-b.jpg
+  "Raspberry Pi 2 Model B v1.1 top new (bg cut out).jpg" by Multicherry
+  https://commons.wikimedia.org/wiki/File:Raspberry_Pi_2_Model_B_v1.1_top_new_(bg_cut_out).jpg
+  Licensed under CC BY-SA 4.0:
+  https://creativecommons.org/licenses/by-sa/4.0/
+  The bundled image is a 500 px Wikimedia Commons thumbnail.
+
+raspberry-pi-5.jpg
+  "Raspberry Pi 5.jpg" by SimonWaldherr
+  https://commons.wikimedia.org/wiki/File:Raspberry_Pi_5.jpg
+  Licensed under CC BY 4.0:
+  https://creativecommons.org/licenses/by/4.0/
+  The bundled image is a 500 px Wikimedia Commons thumbnail.
+
+arduino-mkr.jpg
+  "Arduino mkr1010.jpg" by MakeMagazinDE
+  https://commons.wikimedia.org/wiki/File:Arduino_mkr1010.jpg
+  Licensed under CC BY-SA 4.0:
+  https://creativecommons.org/licenses/by-sa/4.0/
+  The bundled image is a 500 px Wikimedia Commons thumbnail.
+
+esp8266-nodemcu.jpg
+  "NodeMCU DEVKIT 1.0.jpg" by Vowstar
+  https://commons.wikimedia.org/wiki/File:NodeMCU_DEVKIT_1.0.jpg
+  Licensed under CC BY-SA 4.0:
+  https://creativecommons.org/licenses/by-sa/4.0/
+  The bundled image is a 500 px Wikimedia Commons thumbnail.
+
+stm32-blue-pill.jpg
+  "Core Learning Board module Arduino STM32 F103 C8T6.jpg" by Popolon
+  https://commons.wikimedia.org/wiki/File:Core_Learning_Board_module_Arduino_STM32_F103_C8T6.jpg
+  Licensed under CC BY-SA 4.0:
+  https://creativecommons.org/licenses/by-sa/4.0/
+  The bundled image is a 500 px Wikimedia Commons thumbnail.
+
+raspberry-pi-zero.jpg
+  "Raspberry Pi Zero 2 W -- 2024 -- 0012.jpg" by Anil Öztas
+  https://commons.wikimedia.org/wiki/File:Raspberry_Pi_Zero_2_W_--_2024_--_0012.jpg
+  Licensed under CC BY 4.0:
+  https://creativecommons.org/licenses/by/4.0/
+  The bundled image is a 500 px Wikimedia Commons thumbnail.
+
+raspberry-pi-400.jpg
+  "Raspberry Pi 400.jpg" by SimonWaldherr
+  https://commons.wikimedia.org/wiki/File:Raspberry_Pi_400.jpg
+  Licensed under CC BY-SA 4.0:
+  https://creativecommons.org/licenses/by-sa/4.0/
+  The bundled image is a 500 px Wikimedia Commons thumbnail.
+
+raspberry-pi-cm-io.jpg
+  "Raspberry Pi Compute Module IO Board V3 with Compute Module 3.jpg"
+  by the Raspberry Pi Foundation
+  https://commons.wikimedia.org/wiki/File:Raspberry_Pi_Compute_Module_IO_Board_V3_with_Compute_Module_3.jpg
+  Licensed under CC BY-SA 4.0:
+  https://creativecommons.org/licenses/by-sa/4.0/
+  The bundled image is a 500 px Wikimedia Commons thumbnail.
+
+raspberry-pi-4.jpg
+  "Raspberry Pi 4 Model B - Side.jpg" by Laserlicht
+  https://commons.wikimedia.org/wiki/File:Raspberry_Pi_4_Model_B_-_Side.jpg
+  Licensed under CC BY-SA 4.0:
+  https://creativecommons.org/licenses/by-sa/4.0/
+  The bundled image is a 500 px Wikimedia Commons thumbnail.

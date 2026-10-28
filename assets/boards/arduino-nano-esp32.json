@@ -3,7 +3,7 @@
   "name": "Arduino Nano ESP32",
   "category": "Microcontrollers / Nano form factor",
   "microcontroller": "ESP32-S3, dual-core Xtensa LX7 with Wi-Fi and Bluetooth LE",
-  "image": "",
+  "image": "assets/images/boards/arduino-nano.jpg",
   "pins": [
     {
       "number": 1,

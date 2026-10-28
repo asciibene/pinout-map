@@ -3,7 +3,7 @@
   "name": "ESP8266 NodeMCU v1.0",
   "category": "Wi-Fi microcontrollers",
   "microcontroller": "ESP8266EX",
-  "image": "",
+  "image": "assets/images/boards/esp8266-nodemcu.jpg",
   "pins": [
     {
       "number": 1,

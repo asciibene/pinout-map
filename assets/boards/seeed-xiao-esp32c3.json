@@ -3,7 +3,7 @@
   "name": "Seeed XIAO ESP32C3",
   "category": "Microcontrollers / XIAO form factor",
   "microcontroller": "ESP32-C3, single-core 160 MHz RISC-V with Wi-Fi/Bluetooth LE",
-  "image": "",
+  "image": "assets/images/boards/esp32-devkit.jpg",
   "pins": [
     {
       "number": 1,

@@ -3,7 +3,7 @@
   "name": "LOLIN D1 mini V4.0",
   "category": "Wi-Fi microcontroller boards",
   "microcontroller": "ESP8266EX, 80/160 MHz; 4 MB flash",
-  "image": "",
+  "image": "assets/images/boards/esp8266-nodemcu.jpg",
   "pins": [
     {
       "number": 0,

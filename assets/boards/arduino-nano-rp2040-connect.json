@@ -3,7 +3,7 @@
   "name": "Arduino Nano RP2040 Connect",
   "category": "Microcontrollers / Nano form factor",
   "microcontroller": "RP2040 dual-core Arm Cortex-M0+; u-blox NINA-W102 wireless module",
-  "image": "",
+  "image": "assets/images/boards/arduino-nano.jpg",
   "pins": [
     {
       "number": 1,

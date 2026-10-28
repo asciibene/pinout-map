@@ -3,7 +3,7 @@
   "name": "Arduino Due",
   "category": "32-bit ARM microcontrollers",
   "microcontroller": "Atmel SAM3X8E, 84 MHz, 32-bit Arm Cortex-M3",
-  "image": "",
+  "image": "assets/images/boards/arduino-mega.jpg",
   "pins": [
     {
       "number": 0,

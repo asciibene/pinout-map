@@ -3,7 +3,7 @@
   "name": "Arduino Nano 33 IoT",
   "category": "Microcontrollers / Nano form factor",
   "microcontroller": "SAM D21G18A, 48 MHz Arm Cortex-M0+; u-blox NINA-W102 Wi-Fi/Bluetooth",
-  "image": "",
+  "image": "assets/images/boards/arduino-nano.jpg",
   "pins": [
     {
       "number": 1,

@@ -3,7 +3,7 @@
   "name": "Arduino Ethernet Rev3",
   "category": "Classic AVR / Ethernet",
   "microcontroller": "ATmega328P, 16 MHz, 8-bit AVR; W5100 Ethernet controller",
-  "image": "",
+  "image": "assets/images/boards/arduino-uno.jpg",
   "pins": [
     {
       "number": 0,

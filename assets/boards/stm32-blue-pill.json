@@ -3,7 +3,7 @@
   "name": "STM32 Blue Pill",
   "category": "ARM Cortex-M3",
   "microcontroller": "STM32F103C8T6",
-  "image": "",
+  "image": "assets/images/boards/stm32-blue-pill.jpg",
   "pins": [
     {
       "number": 1,

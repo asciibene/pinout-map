@@ -3,7 +3,7 @@
   "name": "Raspberry Pi 400",
   "category": "Single-board computers / carrier boards",
   "microcontroller": "Broadcom BCM2711, quad-core 64-bit Arm Cortex-A72",
-  "image": "",
+  "image": "assets/images/boards/raspberry-pi-400.jpg",
   "pins": [
     {
       "number": 1,

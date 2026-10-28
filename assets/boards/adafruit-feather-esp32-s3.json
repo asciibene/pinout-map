@@ -3,7 +3,7 @@
   "name": "Adafruit Feather ESP32-S3 4MB Flash 2MB PSRAM",
   "category": "Microcontrollers / Feather form factor",
   "microcontroller": "ESP32-S3, dual-core Xtensa LX7; Wi-Fi/Bluetooth LE",
-  "image": "",
+  "image": "assets/images/boards/esp32-devkit.jpg",
   "pins": [
     {
       "number": 1,

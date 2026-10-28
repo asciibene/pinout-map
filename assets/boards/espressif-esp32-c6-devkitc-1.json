@@ -3,7 +3,7 @@
   "name": "Espressif ESP32-C6-DevKitC-1",
   "category": "Wi-Fi 6 / Bluetooth LE microcontroller boards",
   "microcontroller": "ESP32-C6-WROOM-1; single-core 160 MHz RISC-V with Wi-Fi 6, BLE and 802.15.4",
-  "image": "",
+  "image": "assets/images/boards/esp32-devkit.jpg",
   "pins": [
     {
       "number": 1,

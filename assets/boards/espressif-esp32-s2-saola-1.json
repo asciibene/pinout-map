@@ -3,7 +3,7 @@
   "name": "Espressif ESP32-S2-Saola-1",
   "category": "Wi-Fi microcontroller boards",
   "microcontroller": "ESP32-S2; single-core Xtensa LX7 with native USB and Wi-Fi",
-  "image": "",
+  "image": "assets/images/boards/esp32-devkit.jpg",
   "pins": [
     {
       "number": 1,

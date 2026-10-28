@@ -3,7 +3,7 @@
   "name": "Adafruit STM32F405 Feather Express",
   "category": "Microcontrollers / Feather form factor",
   "microcontroller": "STM32F405, 168 MHz Arm Cortex-M4F; 3.3 V logic",
-  "image": "",
+  "image": "assets/images/boards/arduino-nano.jpg",
   "pins": [
     {
       "number": 1,

@@ -3,7 +3,7 @@
   "name": "Espressif ESP32-PICO-KIT",
   "category": "Wi-Fi / Bluetooth microcontroller boards",
   "microcontroller": "ESP32-PICO-D4 SiP; dual-core Xtensa LX6 with integrated flash",
-  "image": "",
+  "image": "assets/images/boards/esp32-devkit.jpg",
   "pins": [
     {
       "number": 1,

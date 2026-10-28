@@ -3,7 +3,7 @@
   "name": "Arduino Nano Every",
   "category": "Classic AVR",
   "microcontroller": "ATmega4809, 20 MHz, 8-bit AVR",
-  "image": "",
+  "image": "assets/images/boards/arduino-nano.jpg",
   "pins": [
     {
       "number": 1,

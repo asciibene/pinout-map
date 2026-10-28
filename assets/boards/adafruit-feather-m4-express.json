@@ -3,7 +3,7 @@
   "name": "Adafruit Feather M4 Express",
   "category": "Microcontrollers / Feather form factor",
   "microcontroller": "SAMD51J19, 120 MHz Arm Cortex-M4F; 3.3 V logic",
-  "image": "",
+  "image": "assets/images/boards/arduino-nano.jpg",
   "pins": [
     {
       "number": 1,

@@ -3,7 +3,7 @@
   "name": "Arduino UNO R4 WiFi",
   "category": "32-bit ARM / Wi-Fi microcontrollers",
   "microcontroller": "Renesas RA4M1, 48 MHz, plus ESP32-S3-MINI-1 wireless coprocessor",
-  "image": "",
+  "image": "assets/images/boards/arduino-uno.jpg",
   "pins": [
     {
       "number": 0,

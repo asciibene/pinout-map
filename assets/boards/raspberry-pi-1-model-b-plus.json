@@ -3,7 +3,7 @@
   "name": "Raspberry Pi 1 Model B+",
   "category": "Single-board computers / carrier boards",
   "microcontroller": "Broadcom BCM2835, single-core Arm1176JZF-S",
-  "image": "",
+  "image": "assets/images/boards/raspberry-pi-model-b.jpg",
   "pins": [
     {
       "number": 1,

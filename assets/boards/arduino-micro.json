@@ -3,7 +3,7 @@
   "name": "Arduino Micro",
   "category": "Classic AVR / native USB",
   "microcontroller": "ATmega32U4, 16 MHz, 8-bit AVR with native USB",
-  "image": "",
+  "image": "assets/images/boards/arduino-nano.jpg",
   "pins": [
     {
       "number": 0,

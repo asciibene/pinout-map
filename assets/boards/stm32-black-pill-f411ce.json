@@ -3,7 +3,7 @@
   "name": "Black Pill STM32F411CE",
   "category": "32-bit ARM microcontrollers",
   "microcontroller": "STM32F411CEU6, 100 MHz Arm Cortex-M4F",
-  "image": "",
+  "image": "assets/images/boards/stm32-blue-pill.jpg",
   "pins": [
     {
       "number": 1,

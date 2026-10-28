@@ -3,7 +3,7 @@
   "name": "Raspberry Pi 5",
   "category": "Single-board computers",
   "microcontroller": "Broadcom BCM2712, quad-core 64-bit SoC",
-  "image": "",
+  "image": "assets/images/boards/raspberry-pi-5.jpg",
   "pins": [
     {
       "number": 1,

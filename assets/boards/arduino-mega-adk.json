@@ -3,7 +3,7 @@
   "name": "Arduino Mega ADK",
   "category": "Classic AVR / USB host",
   "microcontroller": "ATmega2560, 16 MHz, 8-bit AVR; MAX3421E USB host controller",
-  "image": "",
+  "image": "assets/images/boards/arduino-mega.jpg",
   "pins": [
     {
       "number": 0,

@@ -3,7 +3,7 @@
   "name": "Arduino Nano 33 BLE",
   "category": "Microcontrollers / Nano form factor",
   "microcontroller": "nRF52840, 64 MHz Arm Cortex-M4F with Bluetooth LE",
-  "image": "",
+  "image": "assets/images/boards/arduino-nano.jpg",
   "pins": [
     {
       "number": 1,

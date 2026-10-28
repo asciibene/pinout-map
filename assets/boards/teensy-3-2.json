@@ -3,7 +3,7 @@
   "name": "PJRC Teensy 3.2",
   "category": "Microcontrollers / Teensy",
   "microcontroller": "MK20DX256, 72 MHz Arm Cortex-M4",
-  "image": "",
+  "image": "assets/images/boards/arduino-nano.jpg",
   "pins": [
     {
       "number": 0,

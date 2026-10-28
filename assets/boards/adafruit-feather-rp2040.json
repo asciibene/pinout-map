@@ -3,7 +3,7 @@
   "name": "Adafruit Feather RP2040",
   "category": "Microcontrollers / Feather form factor",
   "microcontroller": "RP2040 dual-core Arm Cortex-M0+; 3.3 V logic",
-  "image": "",
+  "image": "assets/images/boards/raspberry-pi-pico.jpg",
   "pins": [
     {
       "number": 1,

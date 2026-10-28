@@ -3,7 +3,7 @@
   "name": "Arduino MKR WAN 1310",
   "category": "Microcontrollers / MKR form factor",
   "microcontroller": "SAMD21 Cortex-M0+; Murata CMWX1ZZABZ LoRa module",
-  "image": "",
+  "image": "assets/images/boards/arduino-mkr.jpg",
   "pins": [
     {
       "number": 1,

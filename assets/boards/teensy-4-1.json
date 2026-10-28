@@ -3,7 +3,7 @@
   "name": "PJRC Teensy 4.1",
   "category": "Microcontrollers / Teensy",
   "microcontroller": "NXP i.MX RT1062, 600 MHz Arm Cortex-M7",
-  "image": "",
+  "image": "assets/images/boards/arduino-nano.jpg",
   "pins": [
     {
       "number": 0,

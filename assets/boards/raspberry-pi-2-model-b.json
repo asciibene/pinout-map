@@ -3,7 +3,7 @@
   "name": "Raspberry Pi 2 Model B",
   "category": "Single-board computers / carrier boards",
   "microcontroller": "Broadcom BCM2836, quad-core Arm Cortex-A7",
-  "image": "",
+  "image": "assets/images/boards/raspberry-pi-model-b.jpg",
   "pins": [
     {
       "number": 1,

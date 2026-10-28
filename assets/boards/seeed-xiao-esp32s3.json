@@ -3,7 +3,7 @@
   "name": "Seeed XIAO ESP32S3",
   "category": "Microcontrollers / XIAO form factor",
   "microcontroller": "ESP32-S3, dual-core Xtensa LX7 with Wi-Fi/Bluetooth LE",
-  "image": "",
+  "image": "assets/images/boards/esp32-devkit.jpg",
   "pins": [
     {
       "number": 1,

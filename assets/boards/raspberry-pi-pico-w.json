@@ -3,7 +3,7 @@
   "name": "Raspberry Pi Pico W",
   "category": "Microcontrollers / Wi-Fi",
   "microcontroller": "RP2040 dual-core ARM Cortex-M0+ with CYW43439",
-  "image": "",
+  "image": "assets/images/boards/raspberry-pi-pico.jpg",
   "pins": [
     {
       "number": 1,

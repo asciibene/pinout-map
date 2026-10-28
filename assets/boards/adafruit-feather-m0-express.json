@@ -3,7 +3,7 @@
   "name": "Adafruit Feather M0 Express",
   "category": "Microcontrollers / Feather form factor",
   "microcontroller": "SAMD21G18, 48 MHz Arm Cortex-M0+; 3.3 V logic",
-  "image": "",
+  "image": "assets/images/boards/arduino-nano.jpg",
   "pins": [
     {
       "number": 1,
