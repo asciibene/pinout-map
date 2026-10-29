@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'notes_store.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -263,11 +264,85 @@ class _BoardListScreenState extends State<BoardListScreen> {
   String _searchQuery = '';
   bool _isGridView = false;
   late final Future<List<Board>> _boardsFuture;
+  final _notesStore = NotesStore();
+  Map<String, Map<int, String>> _boardNotes = {};
+  String? _notesError;
+  bool _notesLoading = true;
+  late Future<void> _notesLoadFuture;
 
   @override
   void initState() {
     super.initState();
     _boardsFuture = _loadBoards();
+    _notesLoadFuture = _loadSavedNotes();
+  }
+
+  Future<void> _loadSavedNotes() async {
+    try {
+      final boards = await _boardsFuture;
+      final errors = <String>[];
+      final results = await Future.wait<MapEntry<String, Map<int, String>>?>(
+        boards.map((board) async {
+          try {
+            return MapEntry(
+              board.id,
+              await _notesStore.loadBoardNotes(board.id),
+            );
+          } catch (error) {
+            errors.add('${board.name}: $error');
+            return null;
+          }
+        }),
+      );
+      final notes = <String, Map<int, String>>{};
+      for (final result in results) {
+        if (result != null) {
+          notes[result.key] = result.value;
+        }
+      }
+      if (!mounted) return;
+      setState(() {
+        _boardNotes = notes;
+        _notesError = errors.isEmpty
+            ? null
+            : 'Could not load ${errors.length} board note file(s): ${errors.first}';
+        _notesLoading = false;
+      });
+    } catch (error) {
+      if (!mounted) return;
+      setState(() {
+        _notesError = 'Could not load saved notes: $error';
+        _notesLoading = false;
+      });
+    }
+  }
+
+  Future<void> _retryLoadingNotes() async {
+    setState(() {
+      _notesLoading = true;
+      _notesError = null;
+    });
+    _notesLoadFuture = _loadSavedNotes();
+    await _notesLoadFuture;
+  }
+
+  Future<void> _openBoard(Board board) async {
+    await _notesLoadFuture;
+    if (!mounted) return;
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => BoardDetailScreen(
+          board: board,
+          initialNotes: _boardNotes[board.id] ?? const {},
+          onNotesChanged: (notes) {
+            setState(() {
+              _boardNotes[board.id] = Map<int, String>.of(notes);
+            });
+          },
+        ),
+      ),
+    );
   }
 
   void _filterBoards(String query) {
@@ -338,6 +413,17 @@ class _BoardListScreenState extends State<BoardListScreen> {
       body: SafeArea(
         child: Column(
           children: [
+            if (_notesLoading) const LinearProgressIndicator(),
+            if (_notesError != null)
+              MaterialBanner(
+                content: Text(_notesError!),
+                actions: [
+                  TextButton(
+                    onPressed: _retryLoadingNotes,
+                    child: const Text('Retry'),
+                  ),
+                ],
+              ),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: TextField(
@@ -394,8 +480,16 @@ class _BoardListScreenState extends State<BoardListScreen> {
                         mainAxisSpacing: 12,
                       ),
                       itemCount: boards.length,
-                      itemBuilder: (context, index) =>
-                          BoardCard(board: boards[index]),
+                      itemBuilder: (context, index) {
+                        final board = boards[index];
+                        return BoardCard(
+                          board: board,
+                          hasNotes:
+                              _boardNotes[board.id]?.isNotEmpty ?? false,
+                          notesLoading: _notesLoading,
+                          onTap: () => _openBoard(board),
+                        );
+                      },
                     );
                   }
 
@@ -404,8 +498,16 @@ class _BoardListScreenState extends State<BoardListScreen> {
                     itemCount: boards.length,
                     separatorBuilder: (context, index) =>
                         const SizedBox(height: 8),
-                    itemBuilder: (context, index) =>
-                        BoardListTile(board: boards[index]),
+                    itemBuilder: (context, index) {
+                      final board = boards[index];
+                      return BoardListTile(
+                        board: board,
+                        hasNotes:
+                            _boardNotes[board.id]?.isNotEmpty ?? false,
+                        notesLoading: _notesLoading,
+                        onTap: () => _openBoard(board),
+                      );
+                    },
                   );
                 },
               ),
@@ -420,13 +522,22 @@ class _BoardListScreenState extends State<BoardListScreen> {
 
 class BoardListTile extends StatelessWidget {
   final Board board;
+  final bool hasNotes;
+  final bool notesLoading;
+  final VoidCallback onTap;
 
-  const BoardListTile({super.key, required this.board});
+  const BoardListTile({
+    super.key,
+    required this.board,
+    required this.hasNotes,
+    required this.notesLoading,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: const Color(0xFF1E1E1E),
+      color: hasNotes ? const Color(0xFF254238) : const Color(0xFF1E1E1E),
       child: ListTile(
         contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
         leading: SizedBox(
@@ -452,15 +563,18 @@ class BoardListTile extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
         ),
         isThreeLine: true,
-        trailing: const Icon(Icons.chevron_right),
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => BoardDetailScreen(board: board),
-            ),
-          );
-        },
+        trailing: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            if (hasNotes)
+              const Padding(
+                padding: EdgeInsets.only(right: 8),
+                child: Icon(Icons.sticky_note_2_outlined, size: 18),
+              ),
+            const Icon(Icons.chevron_right),
+          ],
+        ),
+        onTap: notesLoading ? null : onTap,
       ),
     );
   }
@@ -468,24 +582,27 @@ class BoardListTile extends StatelessWidget {
 
 class BoardCard extends StatelessWidget {
   final Board board;
-  const BoardCard({super.key, required this.board});
+  final bool hasNotes;
+  final bool notesLoading;
+  final VoidCallback onTap;
+
+  const BoardCard({
+    super.key,
+    required this.board,
+    required this.hasNotes,
+    required this.notesLoading,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: const Color(0xFF1E1E1E),
+      color: hasNotes ? const Color(0xFF254238) : const Color(0xFF1E1E1E),
       elevation: 2,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: InkWell(
         borderRadius: BorderRadius.circular(16),
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => BoardDetailScreen(board: board),
-            ),
-          );
-        },
+        onTap: notesLoading ? null : onTap,
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Column(
@@ -539,6 +656,15 @@ class BoardCard extends StatelessWidget {
                         ),
                       ),
                     ),
+                    if (hasNotes)
+                      const Positioned(
+                        top: 6,
+                        right: 6,
+                        child: Icon(
+                          Icons.sticky_note_2_outlined,
+                          semanticLabel: 'Has personal notes',
+                        ),
+                      ),
                   ],
                 ),
               ),
@@ -577,9 +703,99 @@ class BoardCard extends StatelessWidget {
 }
 
 // --- DETAIL PINOUT SCREEN ----------
-class BoardDetailScreen extends StatelessWidget {
+class BoardDetailScreen extends StatefulWidget {
   final Board board;
-  const BoardDetailScreen({super.key, required this.board});
+  final Map<int, String> initialNotes;
+  final ValueChanged<Map<int, String>> onNotesChanged;
+
+  const BoardDetailScreen({
+    super.key,
+    required this.board,
+    required this.initialNotes,
+    required this.onNotesChanged,
+  });
+
+  @override
+  State<BoardDetailScreen> createState() => _BoardDetailScreenState();
+}
+
+class _BoardDetailScreenState extends State<BoardDetailScreen> {
+  final _notesStore = NotesStore();
+  late Map<int, String> _notes;
+  bool _isSavingNote = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _notes = Map<int, String>.of(widget.initialNotes);
+  }
+
+  Future<void> _editNote(Pin pin) async {
+    final controller = TextEditingController(text: _notes[pin.number] ?? '');
+    final note = await showDialog<String>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('Note for ${pin.name}'),
+        content: TextField(
+          controller: controller,
+          autofocus: true,
+          minLines: 3,
+          maxLines: 8,
+          textCapitalization: TextCapitalization.sentences,
+          decoration: const InputDecoration(
+            hintText: 'Add a personal note for this pin',
+            border: OutlineInputBorder(),
+          ),
+        ),
+        actions: [
+          if (_notes.containsKey(pin.number))
+            TextButton(
+              onPressed: () => Navigator.pop(context, ''),
+              child: const Text('Delete note'),
+            ),
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Cancel'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(context, controller.text),
+            child: const Text('Save'),
+          ),
+        ],
+      ),
+    );
+    controller.dispose();
+    if (note == null) return;
+
+    final updatedNotes = Map<int, String>.of(_notes);
+    if (note.trim().isEmpty) {
+      updatedNotes.remove(pin.number);
+    } else {
+      updatedNotes[pin.number] = note.trim();
+    }
+
+    setState(() {
+      _isSavingNote = true;
+    });
+    try {
+      await _notesStore.saveBoardNotes(widget.board.id, updatedNotes);
+      if (!mounted) return;
+      setState(() {
+        _notes = updatedNotes;
+        _isSavingNote = false;
+      });
+      widget.onNotesChanged(updatedNotes);
+    } catch (error) {
+      if (!mounted) return;
+      setState(() {
+        _isSavingNote = false;
+      });
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Could not save note: $error')),
+      );
+    }
+  }
+
   Color _getPinColor(String type) {
     switch (type.toUpperCase()) {
       case 'POWER':
@@ -603,9 +819,7 @@ class BoardDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(board.name),
-      ),
+      appBar: AppBar(title: Text(widget.board.name)),
       body: SafeArea(
         child: Column(
           children: [
@@ -617,12 +831,12 @@ class BoardDetailScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    board.microcontroller,
+                    widget.board.microcontroller,
                     style: TextStyle(color: Colors.grey[400], fontSize: 13),
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    'Total Pins: ${board.pins.length}',
+                    'Total Pins: ${widget.board.pins.length}',
                     style: const TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 15,
@@ -634,12 +848,13 @@ class BoardDetailScreen extends StatelessWidget {
             const Divider(height: 1, color: Colors.white12),
             Expanded(
               child: ListView.separated(
-                itemCount: board.pins.length,
+                itemCount: widget.board.pins.length,
                 separatorBuilder: (context, index) =>
                     const Divider(height: 1, color: Color(0xFF2C2C2C)),
                 itemBuilder: (context, index) {
-                  final pin = board.pins[index];
+                  final pin = widget.board.pins[index];
                   final pinColor = _getPinColor(pin.type);
+                  final note = _notes[pin.number];
 
                   return ListTile(
                     leading: CircleAvatar(
@@ -657,25 +872,62 @@ class BoardDetailScreen extends StatelessWidget {
                       pin.name,
                       style: const TextStyle(fontWeight: FontWeight.bold),
                     ),
-                    subtitle: Text(
-                      pin.description,
-                      style: TextStyle(color: Colors.grey[400], fontSize: 12),
-                    ),
-                    trailing: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                      decoration: BoxDecoration(
-                        border: Border.all(color: pinColor),
-                        borderRadius: BorderRadius.circular(4),
-                      ),
-                      child: Text(
-                        pin.type,
-                        style: TextStyle(
-                          color: pinColor,
-                          fontSize: 10,
-                          fontWeight: FontWeight.bold,
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          pin.description,
+                          style:
+                              TextStyle(color: Colors.grey[400], fontSize: 12),
                         ),
-                      ),
+                        if (note != null)
+                          Padding(
+                            padding: const EdgeInsets.only(top: 4),
+                            child: Text(
+                              'Note: $note',
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(
+                                color: Color(0xFF9FE0BD),
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                      ],
                     ),
+                    trailing: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        if (note != null)
+                          const Padding(
+                            padding: EdgeInsets.only(right: 8),
+                            child: Icon(
+                              Icons.sticky_note_2_outlined,
+                              color: Color(0xFF9FE0BD),
+                              size: 18,
+                            ),
+                          ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 4,
+                          ),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: pinColor),
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          child: Text(
+                            pin.type,
+                            style: TextStyle(
+                              color: pinColor,
+                              fontSize: 10,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    onTap: _isSavingNote ? null : () => _editNote(pin),
                   );
                 },
               ),
