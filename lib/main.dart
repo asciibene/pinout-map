@@ -38,26 +38,46 @@ class AdBanner extends StatefulWidget {
 class _AdBannerState extends State<AdBanner> {
   BannerAd? _bannerAd;
   bool _isLoaded = false;
+  int? _requestedWidth;
 
-  @override
-  void initState() {
-    super.initState();
-    _bannerAd = BannerAd(
+  Future<void> _loadBannerAd(int width) async {
+    _bannerAd?.dispose();
+    _bannerAd = null;
+    _isLoaded = false;
+
+    final size =
+        await AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(width);
+    if (!mounted || _requestedWidth != width) return;
+    if (size == null) {
+      debugPrint('Unable to get an adaptive banner size for width $width.');
+      return;
+    }
+
+    late final BannerAd bannerAd;
+    bannerAd = BannerAd(
       adUnitId: 'ca-app-pub-8409044666841486/4867708430',
-      size: AdSize.banner,
+      size: size,
       request: const AdRequest(),
       listener: BannerAdListener(
         onAdLoaded: (ad) {
-          if (!mounted) return;
+          if (!mounted || !identical(_bannerAd, ad)) return;
           setState(() {
             _isLoaded = true;
           });
         },
         onAdFailedToLoad: (ad, error) {
+          debugPrint('Banner ad failed to load: $error');
           ad.dispose();
+          if (!mounted || !identical(_bannerAd, ad)) return;
+          setState(() {
+            _bannerAd = null;
+            _isLoaded = false;
+          });
         },
       ),
-    )..load();
+    );
+    _bannerAd = bannerAd;
+    bannerAd.load();
   }
 
   @override
@@ -68,17 +88,30 @@ class _AdBannerState extends State<AdBanner> {
 
   @override
   Widget build(BuildContext context) {
-    if (!_isLoaded || _bannerAd == null) {
-      return const SizedBox(
-        height: 50,
-        width: double.infinity,
-      );
-    }
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final width = constraints.maxWidth.truncate();
+        if (width > 0 && width != _requestedWidth) {
+          _requestedWidth = width;
+          _loadBannerAd(width);
+        }
 
-    return SizedBox(
-      height: 50,
-      width: double.infinity,
-      child: AdWidget(ad: _bannerAd!),
+        final bannerAd = _bannerAd;
+        if (!_isLoaded || bannerAd == null) {
+          return const SizedBox(height: 50, width: double.infinity);
+        }
+
+        return SizedBox(
+          height: bannerAd.size.height.toDouble(),
+          child: Center(
+            child: SizedBox(
+              width: bannerAd.size.width.toDouble(),
+              height: bannerAd.size.height.toDouble(),
+              child: AdWidget(ad: bannerAd),
+            ),
+          ),
+        );
+      },
     );
   }
 }
