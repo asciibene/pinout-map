@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -36,6 +37,10 @@ class AdBanner extends StatefulWidget {
 }
 
 class _AdBannerState extends State<AdBanner> {
+  static const _testAdUnitId = 'ca-app-pub-3940256099942544/6300978111';
+  static const _productionAdUnitId =
+      'ca-app-pub-8409044666841486/4867708430';
+
   BannerAd? _bannerAd;
   bool _isLoaded = false;
   int? _requestedWidth;
@@ -55,7 +60,7 @@ class _AdBannerState extends State<AdBanner> {
 
     late final BannerAd bannerAd;
     bannerAd = BannerAd(
-      adUnitId: 'ca-app-pub-8409044666841486/4867708430',
+      adUnitId: kDebugMode ? _testAdUnitId : _productionAdUnitId,
       size: size,
       request: const AdRequest(),
       listener: BannerAdListener(
@@ -88,30 +93,33 @@ class _AdBannerState extends State<AdBanner> {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        final width = constraints.maxWidth.truncate();
-        if (width > 0 && width != _requestedWidth) {
-          _requestedWidth = width;
-          _loadBannerAd(width);
-        }
+    return SafeArea(
+      top: false,
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final width = constraints.maxWidth.truncate();
+          if (width > 0 && width != _requestedWidth) {
+            _requestedWidth = width;
+            _loadBannerAd(width);
+          }
 
-        final bannerAd = _bannerAd;
-        if (!_isLoaded || bannerAd == null) {
-          return const SizedBox(height: 50, width: double.infinity);
-        }
+          final bannerAd = _bannerAd;
+          if (!_isLoaded || bannerAd == null) {
+            return const SizedBox(height: 50, width: double.infinity);
+          }
 
-        return SizedBox(
-          height: bannerAd.size.height.toDouble(),
-          child: Center(
-            child: SizedBox(
-              width: bannerAd.size.width.toDouble(),
-              height: bannerAd.size.height.toDouble(),
-              child: AdWidget(ad: bannerAd),
+          return SizedBox(
+            height: bannerAd.size.height.toDouble(),
+            child: Center(
+              child: SizedBox(
+                width: bannerAd.size.width.toDouble(),
+                height: bannerAd.size.height.toDouble(),
+                child: AdWidget(ad: bannerAd),
+              ),
             ),
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
   }
 }
