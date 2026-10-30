@@ -127,6 +127,37 @@ class _AdBannerState extends State<AdBanner> {
 
 // --- MODELS ---
 class Pin {
+  static final _digitalCapabilityPattern = RegExp(
+    r'\bGPIO\b|\bDIGITAL I/O\b|\bDIGITAL PIN\b',
+    caseSensitive: false,
+  );
+  static final _analogCapabilityPattern = RegExp(
+    r'\bADC\d+(?:_CH\d+)?\b|\bADC\d*\s+INPUT\b|'
+    r'ANALOG INPUT|ADC-CAPABLE|ADC CHANNEL',
+    caseSensitive: false,
+  );
+  static final _i2cCapabilityPattern = RegExp(
+    r'\bI2C\b|\bSDA\b|\bSCL\b',
+    caseSensitive: false,
+  );
+  static final _spiCapabilityPattern = RegExp(
+    r'\bSPI\b|\bMOSI\b|\bMISO\b|\bSCK\b',
+    caseSensitive: false,
+  );
+  static final _uartCapabilityPattern = RegExp(
+    r'\bUART\b|\bUSART\d*\b',
+    caseSensitive: false,
+  );
+  static final _pwmCapabilityPattern = RegExp(r'\bPWM\b', caseSensitive: false);
+  static final _touchCapabilityPattern =
+      RegExp(r'\bTOUCH\b', caseSensitive: false);
+  static final _interruptCapabilityPattern =
+      RegExp(r'\bINTERRUPT(S)?\b', caseSensitive: false);
+  static final _unsupportedCapabilityClausePattern = RegExp(
+    r'\b(NO|WITHOUT|NOT SUPPORTED|NOT AVAILABLE)\b[^.;]*',
+    caseSensitive: false,
+  );
+
   final int number;
   final String name;
   final String type;
@@ -139,6 +170,54 @@ class Pin {
     required this.description,
   });
 
+  List<PinCapability> get capabilities {
+    final text = '$name $description';
+    final normalizedType = type.toUpperCase();
+    final capabilities = <PinCapability>[];
+
+    if (normalizedType == 'GPIO' ||
+        _hasDocumentedCapability(_digitalCapabilityPattern, text)) {
+      capabilities.add(PinCapability.digital);
+    }
+    if (normalizedType == 'ADC' ||
+        _hasDocumentedCapability(_analogCapabilityPattern, text)) {
+      capabilities.add(PinCapability.analog);
+    }
+    if (_hasDocumentedCapability(_i2cCapabilityPattern, text)) {
+      capabilities.add(PinCapability.i2c);
+    }
+    if (normalizedType == 'SPI' ||
+        _hasDocumentedCapability(_spiCapabilityPattern, text)) {
+      capabilities.add(PinCapability.spi);
+    }
+    if (normalizedType == 'UART' ||
+        _hasDocumentedCapability(_uartCapabilityPattern, text)) {
+      capabilities.add(PinCapability.uart);
+    }
+    if (_hasDocumentedCapability(_pwmCapabilityPattern, text)) {
+      capabilities.add(PinCapability.pwm);
+    }
+    if (_hasDocumentedCapability(_touchCapabilityPattern, text)) {
+      capabilities.add(PinCapability.touch);
+    }
+    if (_hasDocumentedCapability(_interruptCapabilityPattern, text)) {
+      capabilities.add(PinCapability.interrupt);
+    }
+
+    return capabilities;
+  }
+
+  static bool _hasDocumentedCapability(RegExp pattern, String text) {
+    final unsupportedClauses =
+        _unsupportedCapabilityClausePattern.allMatches(text);
+    return pattern.allMatches(text).any(
+          (match) => !unsupportedClauses.any(
+            (clause) =>
+                match.start >= clause.start && match.end <= clause.end,
+          ),
+        );
+  }
+
   factory Pin.fromJson(Map<String, dynamic> json, {required String context}) {
     return Pin(
       number: _requiredInt(json, 'number', context: context),
@@ -147,6 +226,23 @@ class Pin {
       description: _requiredString(json, 'description', context: context),
     );
   }
+}
+
+enum PinCapability {
+  digital('Digital I/O', Icons.input, Colors.lightBlueAccent),
+  analog('Analog input (ADC)', Icons.show_chart, Colors.amberAccent),
+  i2c('I²C', Icons.swap_horiz, Colors.cyanAccent),
+  spi('SPI', Icons.memory, Colors.purpleAccent),
+  uart('UART', Icons.sync_alt, Colors.greenAccent),
+  pwm('PWM', Icons.tune, Colors.orangeAccent),
+  touch('Touch sensing', Icons.touch_app, Colors.pinkAccent),
+  interrupt('External interrupt', Icons.bolt, Colors.yellowAccent);
+
+  const PinCapability(this.label, this.icon, this.color);
+
+  final String label;
+  final IconData icon;
+  final Color color;
 }
 
 class Board {
@@ -872,28 +968,37 @@ class _BoardDetailScreenState extends State<BoardDetailScreen> {
                       pin.name,
                       style: const TextStyle(fontWeight: FontWeight.bold),
                     ),
-                    subtitle: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          pin.description,
-                          style:
-                              TextStyle(color: Colors.grey[400], fontSize: 12),
-                        ),
-                        if (note != null)
-                          Padding(
-                            padding: const EdgeInsets.only(top: 4),
-                            child: Text(
-                              'Note: $note',
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(
-                                color: Color(0xFF9FE0BD),
-                                fontSize: 12,
-                              ),
+                    subtitle: Padding(
+                      padding: const EdgeInsets.only(top: 4),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          PinCapabilityIndicators(
+                            capabilities: pin.capabilities,
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            pin.description,
+                            style: TextStyle(
+                              color: Colors.grey[400],
+                              fontSize: 12,
                             ),
                           ),
-                      ],
+                          if (note != null)
+                            Padding(
+                              padding: const EdgeInsets.only(top: 4),
+                              child: Text(
+                                'Note: $note',
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: const TextStyle(
+                                  color: Color(0xFF9FE0BD),
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ),
+                        ],
+                      ),
                     ),
                     trailing: Row(
                       mainAxisSize: MainAxisSize.min,
@@ -936,6 +1041,49 @@ class _BoardDetailScreenState extends State<BoardDetailScreen> {
         ),
       ),
       bottomNavigationBar: const AdBanner(),
+    );
+  }
+}
+
+class PinCapabilityIndicators extends StatelessWidget {
+  final List<PinCapability> capabilities;
+
+  const PinCapabilityIndicators({super.key, required this.capabilities});
+
+  @override
+  Widget build(BuildContext context) {
+    if (capabilities.isEmpty) {
+      return Text(
+        'No capabilities listed',
+        style: TextStyle(color: Colors.grey[600], fontSize: 10),
+      );
+    }
+
+    return Wrap(
+      spacing: 6,
+      runSpacing: 4,
+      children: [
+        for (final capability in capabilities)
+          Tooltip(
+            message: capability.label,
+            child: Semantics(
+              label: capability.label,
+              child: Container(
+                width: 24,
+                height: 24,
+                decoration: BoxDecoration(
+                  color: capability.color.withValues(alpha: 0.12),
+                  borderRadius: BorderRadius.circular(6),
+                ),
+                child: Icon(
+                  capability.icon,
+                  size: 15,
+                  color: capability.color,
+                ),
+              ),
+            ),
+          ),
+      ],
     );
   }
 }

@@ -50,3 +50,11 @@ Each file stores notes keyed by the board-specific pin number:
 
 In the web app, notes are stored in browser local storage as one JSON entry per
 board because browsers do not provide apps with a private filesystem.
+
+## Pin capability indicators
+
+The board detail view displays compact icons for digital I/O, ADC, I²C, SPI,
+UART, PWM, touch sensing, and external interrupts when those functions are
+identified in a pin's type or description. Tap or focus an icon to read its
+label. Indicators reflect only the information present in the board data; an
+unlisted capability is not necessarily unsupported.
