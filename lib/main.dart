@@ -1064,22 +1064,32 @@ class PinCapabilityIndicators extends StatelessWidget {
       runSpacing: 4,
       children: [
         for (final capability in capabilities)
-          Tooltip(
-            message: capability.label,
-            child: Semantics(
-              label: capability.label,
-              child: Container(
-                width: 24,
-                height: 24,
-                decoration: BoxDecoration(
-                  color: capability.color.withValues(alpha: 0.12),
-                  borderRadius: BorderRadius.circular(6),
-                ),
-                child: Icon(
-                  capability.icon,
-                  size: 15,
-                  color: capability.color,
-                ),
+          Semantics(
+            label: capability.label,
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+              decoration: BoxDecoration(
+                color: capability.color.withValues(alpha: 0.12),
+                borderRadius: BorderRadius.circular(6),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    capability.icon,
+                    size: 14,
+                    color: capability.color,
+                  ),
+                  const SizedBox(width: 4),
+                  Text(
+                    capability.label,
+                    style: TextStyle(
+                      color: capability.color,
+                      fontSize: 10,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
