@@ -1,4 +1,7 @@
 # Pinout app
+[![Build and distribute](https://github.com/asciibene/pinout-map/actions/workflows/Build.yml/badge.svg)](https://github.com/asciibene/pinout-map/actions/workflows/Build.yml)
+
+
 ## Adding boards
 
 Add one `.json` file per board inside `assets/boards/`. The app loads all JSON
