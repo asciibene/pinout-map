@@ -16,14 +16,47 @@ class PinoutApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const accent = Color(0xFF75DCC5);
+    final colorScheme = ColorScheme.fromSeed(
+      seedColor: accent,
+      brightness: Brightness.dark,
+      surface: const Color(0xFF111B24),
+    );
+
     return MaterialApp(
       title: 'Pinout Map',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
         brightness: Brightness.dark,
-        colorSchemeSeed: Colors.blueGrey,
-        scaffoldBackgroundColor: const Color(0xFF121212),
+        colorScheme: colorScheme,
+        scaffoldBackgroundColor: const Color(0xFF0B1218),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF0B1218),
+          foregroundColor: Color(0xFFE7F0F3),
+          surfaceTintColor: Colors.transparent,
+          elevation: 0,
+          scrolledUnderElevation: 0,
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+          filled: true,
+          fillColor: const Color(0xFF141F28),
+          hintStyle: TextStyle(color: Colors.blueGrey.shade300),
+          contentPadding:
+              const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+            borderSide: BorderSide.none,
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+            borderSide: const BorderSide(color: Color(0xFF25343E)),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+            borderSide: const BorderSide(color: accent, width: 1.4),
+          ),
+        ),
       ),
       home: const BoardListScreen(),
     );
@@ -477,8 +510,10 @@ class _BoardListScreenState extends State<BoardListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Pinout Map'),
-        centerTitle: true,
+        title: const Text(
+          'Pinout Map',
+          style: TextStyle(fontWeight: FontWeight.w700, letterSpacing: -0.3),
+        ),
         actions: [
           PopupMenuButton<_BoardMenuAction>(
             tooltip: 'More options',
@@ -521,20 +556,33 @@ class _BoardListScreenState extends State<BoardListScreen> {
                 ],
               ),
             Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: TextField(
-                onChanged: _filterBoards,
-                decoration: InputDecoration(
-                  hintText:
-                      'Search boards, microcontrollers, or pins (e.g. SDA)...',
-                  prefixIcon: const Icon(Icons.search),
-                  filled: true,
-                  fillColor: const Color(0xFF1E1E1E),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: BorderSide.none,
+              padding: const EdgeInsets.fromLTRB(20, 12, 20, 18),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Find your board',
+                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: -0.5,
+                        ),
                   ),
-                ),
+                  const SizedBox(height: 4),
+                  Text(
+                    'Browse pinouts and find the right connection.',
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          color: Colors.blueGrey.shade200,
+                        ),
+                  ),
+                  const SizedBox(height: 16),
+                  TextField(
+                    onChanged: _filterBoards,
+                    decoration: const InputDecoration(
+                      hintText: 'Search boards, chips, or pins (e.g. SDA)',
+                      prefixIcon: Icon(Icons.search),
+                    ),
+                  ),
+                ],
               ),
             ),
             Expanded(
@@ -562,16 +610,44 @@ class _BoardListScreenState extends State<BoardListScreen> {
                       .toList();
 
                   if (boards.isEmpty) {
-                    return const Center(child: Text('No microcontrollers found'));
+                    return Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(32),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(
+                              Icons.search_off_rounded,
+                              size: 40,
+                              color: Colors.blueGrey.shade400,
+                            ),
+                            const SizedBox(height: 12),
+                            Text(
+                              'No boards found',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleMedium
+                                  ?.copyWith(fontWeight: FontWeight.w600),
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              'Try a different board, chip, or pin name.',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(color: Colors.blueGrey.shade300),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
                   }
 
                   if (_isGridView) {
                     return GridView.builder(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
-                        childAspectRatio: 0.75,
+                        childAspectRatio: 0.68,
                         crossAxisSpacing: 12,
                         mainAxisSpacing: 12,
                       ),
@@ -590,7 +666,7 @@ class _BoardListScreenState extends State<BoardListScreen> {
                   }
 
                   return ListView.separated(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
                     itemCount: boards.length,
                     separatorBuilder: (context, index) =>
                         const SizedBox(height: 8),
@@ -633,14 +709,23 @@ class BoardListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: hasNotes ? const Color(0xFF254238) : const Color(0xFF1E1E1E),
+      margin: EdgeInsets.zero,
+      color: hasNotes ? const Color(0xFF142B2B) : const Color(0xFF111B24),
+      elevation: 0,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+        side: BorderSide(
+          color: hasNotes ? const Color(0xFF286357) : const Color(0xFF25343E),
+        ),
+      ),
+      clipBehavior: Clip.antiAlias,
       child: ListTile(
-        contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         leading: SizedBox(
-          width: 52,
-          height: 52,
+          width: 56,
+          height: 56,
           child: board.imageAsset.isEmpty
-              ? const Icon(Icons.developer_board, color: Colors.blueGrey)
+              ? const Icon(Icons.developer_board, color: Color(0xFF75DCC5))
               : Image.asset(
                   board.imageAsset,
                   fit: BoxFit.contain,
@@ -651,14 +736,17 @@ class BoardListTile extends StatelessWidget {
           board.name,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
-          style: const TextStyle(fontWeight: FontWeight.bold),
+          style: const TextStyle(
+            fontWeight: FontWeight.w700,
+            letterSpacing: -0.2,
+          ),
         ),
         subtitle: Text(
-          '${board.microcontroller}\n${board.category} - ${board.pins.length} pins',
+          '${board.microcontroller}  ·  ${board.pins.length} pins\n${board.category}',
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
         ),
-        isThreeLine: true,
+        isThreeLine: false,
         trailing: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -693,26 +781,32 @@ class BoardCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: hasNotes ? const Color(0xFF254238) : const Color(0xFF1E1E1E),
-      elevation: 2,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      color: hasNotes ? const Color(0xFF142B2B) : const Color(0xFF111B24),
+      elevation: 0,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(18),
+        side: BorderSide(
+          color: hasNotes ? const Color(0xFF286357) : const Color(0xFF25343E),
+        ),
+      ),
+      clipBehavior: Clip.antiAlias,
       child: InkWell(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(18),
         onTap: notesLoading ? null : onTap,
         child: Padding(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(12),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: 76,
+                height: 88,
                 width: double.infinity,
                 child: Stack(
                   children: [
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(12),
                       child: ColoredBox(
-                        color: const Color(0xFF171717),
+                        color: const Color(0xFF0B1218),
                         child: SizedBox.expand(
                           child: board.imageAsset.isEmpty
                               ? const Center(
@@ -739,15 +833,16 @@ class BoardCard extends StatelessWidget {
                           vertical: 4,
                         ),
                         decoration: BoxDecoration(
-                          color: const Color(0xCC121212),
-                          borderRadius: BorderRadius.circular(6),
+                          color: const Color(0xE610191F),
+                          borderRadius: BorderRadius.circular(8),
                         ),
                         child: Text(
                           board.category,
                           style: const TextStyle(
-                            fontSize: 10,
-                            color: Colors.blueAccent,
+                            fontSize: 9,
+                            color: Color(0xFF91E5D2),
                             fontWeight: FontWeight.bold,
+                            letterSpacing: 0.4,
                           ),
                         ),
                       ),
@@ -759,6 +854,7 @@ class BoardCard extends StatelessWidget {
                         child: Icon(
                           Icons.sticky_note_2_outlined,
                           semanticLabel: 'Has personal notes',
+                          color: Color(0xFF91E5D2),
                         ),
                       ),
                   ],
@@ -769,24 +865,38 @@ class BoardCard extends StatelessWidget {
                 board.name,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                style:
-                    const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: -0.2,
+                ),
               ),
               const SizedBox(height: 4),
               Text(
                 board.microcontroller,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(fontSize: 12, color: Colors.grey[400]),
+                style: TextStyle(
+                  fontSize: 12,
+                  height: 1.3,
+                  color: Colors.blueGrey.shade200,
+                ),
               ),
               const SizedBox(height: 4),
               Row(
                 children: [
-                  Icon(Icons.developer_board, size: 14, color: Colors.grey[500]),
+                  Icon(
+                    Icons.developer_board,
+                    size: 14,
+                    color: Colors.blueGrey.shade300,
+                  ),
                   const SizedBox(width: 4),
                   Text(
                     '${board.pins.length} Pins',
-                    style: TextStyle(fontSize: 11, color: Colors.grey[500]),
+                    style: TextStyle(
+                      fontSize: 11,
+                      color: Colors.blueGrey.shade300,
+                    ),
                   ),
                 ],
               ),
@@ -915,124 +1025,215 @@ class _BoardDetailScreenState extends State<BoardDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.board.name)),
+      appBar: AppBar(
+        title: Text(
+          widget.board.name,
+          style: const TextStyle(fontWeight: FontWeight.w700),
+        ),
+      ),
       body: SafeArea(
         child: Column(
           children: [
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(20),
-              color: const Color(0xFF1E1E1E),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    widget.board.microcontroller,
-                    style: TextStyle(color: Colors.grey[400], fontSize: 13),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    'Total Pins: ${widget.board.pins.length}',
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 15,
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+              child: Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(18),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF111B24),
+                  borderRadius: BorderRadius.circular(18),
+                  border: Border.all(color: const Color(0xFF25343E)),
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      width: 48,
+                      height: 48,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF1B3537),
+                        borderRadius: BorderRadius.circular(14),
+                      ),
+                      child: const Icon(
+                        Icons.memory_rounded,
+                        color: Color(0xFF91E5D2),
+                      ),
                     ),
-                  ),
-                ],
+                    const SizedBox(width: 14),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            widget.board.microcontroller,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 15,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            widget.board.category,
+                            style: TextStyle(
+                              color: Colors.blueGrey.shade200,
+                              fontSize: 12,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 11,
+                        vertical: 8,
+                      ),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF1B3537),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Column(
+                        children: [
+                          Text(
+                            '${widget.board.pins.length}',
+                            style: const TextStyle(
+                              color: Color(0xFF91E5D2),
+                              fontSize: 16,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          Text(
+                            'PINS',
+                            style: TextStyle(
+                              color: Colors.blueGrey.shade200,
+                              fontSize: 9,
+                              fontWeight: FontWeight.w700,
+                              letterSpacing: 0.8,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-            const Divider(height: 1, color: Colors.white12),
+            if (_isSavingNote)
+              const LinearProgressIndicator(minHeight: 2),
             Expanded(
               child: ListView.separated(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
                 itemCount: widget.board.pins.length,
                 separatorBuilder: (context, index) =>
-                    const Divider(height: 1, color: Color(0xFF2C2C2C)),
+                    const SizedBox(height: 8),
                 itemBuilder: (context, index) {
                   final pin = widget.board.pins[index];
                   final pinColor = _getPinColor(pin.type);
                   final note = _notes[pin.number];
 
-                  return ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: pinColor.withValues(alpha: 0.2),
-                      child: Text(
-                        '${pin.number}',
-                        style: TextStyle(
-                          color: pinColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 12,
+                  return Card(
+                    margin: EdgeInsets.zero,
+                    color: const Color(0xFF111B24),
+                    elevation: 0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                      side: const BorderSide(color: Color(0xFF25343E)),
+                    ),
+                    clipBehavior: Clip.antiAlias,
+                    child: ListTile(
+                      contentPadding: const EdgeInsets.fromLTRB(14, 10, 14, 10),
+                      leading: Container(
+                        width: 42,
+                        height: 42,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          color: pinColor.withValues(alpha: 0.13),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Text(
+                          '${pin.number}',
+                          style: TextStyle(
+                            color: pinColor,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 13,
+                          ),
                         ),
                       ),
-                    ),
-                    title: Text(
-                      pin.name,
-                      style: const TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    subtitle: Padding(
-                      padding: const EdgeInsets.only(top: 4),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          PinCapabilityIndicators(
-                            capabilities: pin.capabilities,
-                          ),
-                          const SizedBox(height: 4),
-                          Text(
-                            pin.description,
-                            style: TextStyle(
-                              color: Colors.grey[400],
-                              fontSize: 12,
+                      title: Text(
+                        pin.name,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: -0.1,
+                        ),
+                      ),
+                      subtitle: Padding(
+                        padding: const EdgeInsets.only(top: 7),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            PinCapabilityIndicators(
+                              capabilities: pin.capabilities,
                             ),
-                          ),
-                          if (note != null)
-                            Padding(
-                              padding: const EdgeInsets.only(top: 4),
-                              child: Text(
-                                'Note: $note',
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                                style: const TextStyle(
-                                  color: Color(0xFF9FE0BD),
-                                  fontSize: 12,
-                                ),
+                            const SizedBox(height: 7),
+                            Text(
+                              pin.description,
+                              style: TextStyle(
+                                color: Colors.blueGrey.shade200,
+                                fontSize: 12,
+                                height: 1.35,
                               ),
                             ),
-                        ],
+                            if (note != null)
+                              Padding(
+                                padding: const EdgeInsets.only(top: 7),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Icon(
+                                      Icons.sticky_note_2_outlined,
+                                      color: Color(0xFF91E5D2),
+                                      size: 15,
+                                    ),
+                                    const SizedBox(width: 6),
+                                    Expanded(
+                                      child: Text(
+                                        note,
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: const TextStyle(
+                                          color: Color(0xFF91E5D2),
+                                          fontSize: 12,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                          ],
+                        ),
                       ),
-                    ),
-                    trailing: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        if (note != null)
-                          const Padding(
-                            padding: EdgeInsets.only(right: 8),
-                            child: Icon(
-                              Icons.sticky_note_2_outlined,
-                              color: Color(0xFF9FE0BD),
-                              size: 18,
-                            ),
-                          ),
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 12,
-                            vertical: 4,
-                          ),
-                          decoration: BoxDecoration(
-                            border: Border.all(color: pinColor),
-                            borderRadius: BorderRadius.circular(4),
-                          ),
-                          child: Text(
-                            pin.type,
-                            style: TextStyle(
-                              color: pinColor,
-                              fontSize: 10,
-                              fontWeight: FontWeight.bold,
-                            ),
+                      trailing: Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 9,
+                          vertical: 5,
+                        ),
+                        decoration: BoxDecoration(
+                          color: pinColor.withValues(alpha: 0.12),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Text(
+                          pin.type,
+                          style: TextStyle(
+                            color: pinColor,
+                            fontSize: 10,
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: 0.3,
                           ),
                         ),
-                      ],
+                      ),
+                      onTap: _isSavingNote ? null : () => _editNote(pin),
                     ),
-                    onTap: _isSavingNote ? null : () => _editNote(pin),
                   );
                 },
               ),
@@ -1055,7 +1256,7 @@ class PinCapabilityIndicators extends StatelessWidget {
     if (capabilities.isEmpty) {
       return Text(
         'No capabilities listed',
-        style: TextStyle(color: Colors.grey[600], fontSize: 10),
+        style: TextStyle(color: Colors.blueGrey.shade300, fontSize: 11),
       );
     }
 
@@ -1069,15 +1270,18 @@ class PinCapabilityIndicators extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
               decoration: BoxDecoration(
-                color: capability.color.withValues(alpha: 0.12),
-                borderRadius: BorderRadius.circular(6),
+                color: capability.color.withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(7),
+                border: Border.all(
+                  color: capability.color.withValues(alpha: 0.22),
+                ),
               ),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Icon(
                     capability.icon,
-                    size: 14,
+                    size: 12,
                     color: capability.color,
                   ),
                   const SizedBox(width: 4),
